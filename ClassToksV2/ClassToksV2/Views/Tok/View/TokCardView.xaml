@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassToksV2.Views.Tok.View.TokCardView"
+             xmlns:model="clr-namespace:ClassToksV2.Models" 
+             xmlns:local="clr-namespace:ClassToksV2.ViewModels" xmlns:flip="clr-namespace:ClassToksV2.Views"
+             x:DataType="model:ClassTokXF"
+             Visual="Material">
+    <flip:XFFlipView>
+        <flip:XFFlipView.FrontView>
+            <Frame
+                    Margin="10"
+                    Padding="0"
+                    BackgroundColor="#0080ff"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    OutlineColor="Silver">
+                <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding PrimaryFieldText}"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+            </Frame>
+        </flip:XFFlipView.FrontView>
+
+        <flip:XFFlipView.BackView>
+            <Frame
+                    Margin="10"
+                    Padding="0"
+                    BackgroundColor="#ff0080"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    OutlineColor="Silver">
+                <Label
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding UserDisplayName}"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+
+            </Frame>
+
+
+        </flip:XFFlipView.BackView>
+        <flip:XFFlipView.GestureRecognizers>
+            <TapGestureRecognizer
+                Tapped="TapGestureRecognizer_Tapped_1"
+                NumberOfTapsRequired="1" />
+        </flip:XFFlipView.GestureRecognizers>
+    </flip:XFFlipView>
+</ContentView>
+
+<!--<flip:XFFlipView.FrontView>
+    <Frame
+                    Margin="10"
+                    Padding="0"
+                    BackgroundColor="#0080ff"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    OutlineColor="Silver">
+        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="tts"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+    </Frame>
+</flip:XFFlipView.FrontView>
+
+<flip:XFFlipView.BackView>
+    <Frame
+                    Margin="10"
+                    Padding="0"
+                    BackgroundColor="#ff0080"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    OutlineColor="Silver">
+        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="tt"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+
+        --><!--<Image
+                            Grid.Row="1"
+                            Aspect="AspectFit"
+                            HeightRequest="100"
+                            Source="{Binding Image}"
+                            VerticalOptions="CenterAndExpand" />--><!--
+    </Frame>
+</flip:XFFlipView.BackView>-->
+
+<!--<Frame
+        x:Name="frontView"
+        IsVisible="True"
+        Margin="10"
+        Padding="0"
+        BackgroundColor="#FFFFFF"
+        CornerRadius="10"
+        HasShadow="False"
+        OutlineColor="Black">
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Label
+                Grid.Row="0"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="{Binding PrimaryFieldText}"
+                TextColor="Black"
+                VerticalTextAlignment="Center" />
+    </StackLayout>
+    <Frame.GestureRecognizers>
+        <TapGestureRecognizer
+                Tapped="TapGestureRecognizer_Tapped_1"
+                NumberOfTapsRequired="1" />
+    </Frame.GestureRecognizers>
+</Frame>
+<Frame
+        x:Name="backView"
+        IsVisible="False"
+        Margin="10"
+        Padding="0"
+        BackgroundColor="#FFFFFF"
+        CornerRadius="10"
+        HasShadow="False"
+        OutlineColor="Black">
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Label
+                Grid.Row="0"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="{Binding UserDisplayName}"
+                TextColor="Black"
+                VerticalTextAlignment="Center" />
+    </StackLayout>
+    <Frame.GestureRecognizers>
+        <TapGestureRecognizer
+                Tapped="TapGestureRecognizer_Tapped_1"
+                NumberOfTapsRequired="1" />
+    </Frame.GestureRecognizers>
+</Frame>-->

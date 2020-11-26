@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:ClassToksV2.Views"
+             x:Class="ClassToksV2.Views.GroupInfoPage"
+             xmlns:local="clr-namespace:ClassToksV2"
+             Title="{Binding Title}">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior>
+            <BackButtonBehavior.TextOverride>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="iOS" Value=" " />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </BackButtonBehavior.TextOverride>
+        </BackButtonBehavior>
+    </Shell.BackButtonBehavior>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding ActionsTokCommand}" Text="Actions" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView Orientation="Vertical">
+    <Grid>
+        <StackLayout Spacing="20" Padding="15" Orientation="Vertical">
+            <StackLayout x:Name="stkRowTop" Orientation="Horizontal">
+                <Grid 
+                ColumnDefinitions="*" 
+                RowDefinitions="*">
+                    <!-- Profile Circle Image -->
+                    <Ellipse
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="48"
+                    HeightRequest="48"
+                    Stroke="#3F51B5"
+                    StrokeThickness="2"
+                    Fill="White"/>
+                    <ImageButton
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="48"
+                        HeightRequest="48">
+                            <ImageButton.Clip>
+                            <EllipseGeometry
+                            Center="24,24"
+                            RadiusX="24"
+                            RadiusY="24"/>
+                        </ImageButton.Clip>
+                        <ImageButton.Source>
+                            <UriImageSource Uri="{Binding Item.UserPhoto}" CacheValidity="14" CachingEnabled="true"/>
+                        </ImageButton.Source>
+                    </ImageButton>
+                </Grid>
+                <StackLayout Orientation="Vertical" VerticalOptions="Start">
+                    <Button x:Name="btnUserDisplayName" Text="{Binding Item.UserDisplayName, Mode=TwoWay}"  BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Black" TextTransform="None" FontAttributes="Bold"></Button>
+                    <Label Text="{Binding Item.TitleId, Mode=TwoWay}" Style="{DynamicResource CategoryStyle}"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Label Text="{Binding Item.Name, Mode=TwoWay}" FontSize="30" FontAttributes="Bold"/>
+            <Label Text="{Binding Item.Description, Mode=TwoWay}" FontSize="Small"/>
+
+                <Image
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+                <Image.Source>
+                    <UriImageSource Uri="{Binding Item.Image, Mode=TwoWay}" 
+			        CacheValidity="14" 
+			        CachingEnabled="true"/>
+                </Image.Source>
+            </Image>
+        </StackLayout>
+        <views:WaitingView Grid.Row="0" x:Name="waitingView" InputTransparent="True"
+                IsVisible="False" Margin="200"></views:WaitingView>
+    </Grid>
+    </ScrollView>
+    
+</ContentPage>

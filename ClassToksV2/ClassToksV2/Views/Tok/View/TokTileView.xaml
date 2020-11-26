@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassToksV2.Views.Tok.View.TokTileView"
+             xmlns:model="clr-namespace:ClassToksV2.Models" 
+             xmlns:local="clr-namespace:ClassToksV2.ViewModels">
+  <ContentView.Content>
+        <Frame
+            x:Name="frameTile"
+            x:DataType="model:ClassTokXF"
+                Padding="0"
+                BackgroundColor="{Binding ColorXF, Mode=TwoWay}"
+                CornerRadius="1"
+                HasShadow="False"
+                HeightRequest="275"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand">
+            <Frame
+                Margin="6"
+                Padding="5"
+                BackgroundColor="White"
+                CornerRadius="1"
+                HasShadow="False">
+
+                <!--<Frame.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                            EndPoint="1,0">
+                        <GradientStop Color="DarkOrange"
+                        Offset="0.1"/>
+                        <GradientStop Color="DarkGoldenrod"
+                        Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Frame.Background>-->
+            <!--<StackLayout x:Name="stkTile" Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill">-->
+            
+            <Grid x:Name="stkTile" RowDefinitions="25*,65*,10*" ColumnDefinitions="*" HorizontalOptions="Fill" VerticalOptions="Fill">
+
+                <Grid x:Name="stkRowTop" Grid.Row="0"
+                                ColumnDefinitions="3*,4*,3*" 
+                                RowDefinitions="*">
+                    <Grid  Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Start"
+                                ColumnDefinitions="*" 
+                                RowDefinitions="*">
+                        <!-- Profile Circle Image -->
+                        <Ellipse
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="40"
+                                        HeightRequest="40"
+                                        Stroke="#542a7d"
+                                        StrokeThickness="4"
+                                        Fill="White"/>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            Aspect="AspectFill">
+                            <Image.Clip>
+                                <EllipseGeometry
+                                                Center="20,20"
+                                                RadiusX="20"
+                                                RadiusY="20"/>
+                            </Image.Clip>
+                            <Image.Source>
+                                <UriImageSource Uri="{Binding UserPhoto, Mode=TwoWay}" 
+			                                CacheValidity="14" 
+			                                CachingEnabled="true"/>
+                            </Image.Source>
+                        </Image>
+                    </Grid>
+
+                    <StackLayout Grid.Column="1"  Orientation="Vertical"  Spacing="1" Padding="0" VerticalOptions="Start" HorizontalOptions="Center">
+                        <Label Text="{Binding UserDisplayName, Mode=TwoWay}"
+                               FontAttributes="Bold" FontFamily="Roboto"
+                               TextColor="Black"
+                               FontSize="12"
+                               LineBreakMode="TailTruncation"
+                               HorizontalTextAlignment="Center"
+                               MaxLines="1"/>
+                        <Label Text="{Binding TitleId, Mode=TwoWay}"
+                               TextColor="Black" FontFamily="Roboto"
+                               FontAttributes="{Binding FontAttributesTitleSubaccount, Mode=TwoWay}"
+                               FontSize="10"
+                               LineBreakMode="TailTruncation"
+                               HorizontalTextAlignment="Center"
+                               MaxLines="1"/>
+                        <!--Sticker-->
+                        <Image Aspect="AspectFit" HeightRequest="20">
+                            <Image.Source>
+                                <UriImageSource Uri="https://tokketcontent.blob.core.windows.net/images/STICKERS_black_-Attention!.png" CacheValidity="14" CachingEnabled="true"/>
+                            </Image.Source>
+                        </Image>
+                    </StackLayout>
+                    <!--Flag or Patch-->
+                    <Image Grid.Column="2" Aspect="Fill" VerticalOptions="Start" HorizontalOptions="End" HeightRequest="40"  WidthRequest="40">
+                        <Image.Source>
+                                <UriImageSource Uri="https://tokketcontent.blob.core.windows.net/pointssymbol48/set1-black%20(0).jpg" CacheValidity="14" CachingEnabled="true"/>
+                        </Image.Source>
+                    </Image>
+                </Grid>
+
+                <StackLayout x:Name="stkRowMiddle" Grid.Row="1" Orientation="Vertical" HorizontalOptions="Center">
+
+                        <Label Text="{Binding Row0, Mode=TwoWay}" HorizontalTextAlignment="Center"
+                                    FontSize="15" FontAttributes="{Binding FontAttributesPrimary, Mode=TwoWay}" MaxLines="1" LineBreakMode="TailTruncation">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto"/>
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        
+                        <!--<Label Text="{Binding PrimaryFieldText, Mode=TwoWay}" HorizontalTextAlignment="Center"
+                                    FontSize="15" FontAttributes="{Binding FontAttributesPrimary, Mode=TwoWay}" MaxLines="1" LineBreakMode="TailTruncation"/>-->
+
+
+                    <!--<Label Text="{Binding SecondaryFieldText, Mode=TwoWay}" HorizontalTextAlignment="Center" FontSize="11" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black" IsVisible="{Binding IsBasic, Mode=TwoWay}"/>-->
+
+
+                    <StackLayout Orientation="Vertical"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" IsVisible="{Binding IsBasic, Mode=TwoWay}" Spacing="1" Padding="0">
+                            <Label Text="{Binding Row1, Mode=TwoWay}" HorizontalTextAlignment="Center" FontSize="18" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black" FontFamily="Roboto"/>
+                            <Label Text="{Binding Row2, Mode=TwoWay}" HorizontalTextAlignment="Center" FontSize="{Binding FontSizeRow3, Mode=TwoWay}" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black" FontFamily="Roboto"/>
+                            <Label Text="{Binding Row3, Mode=TwoWay}" HorizontalTextAlignment="Center" FontSize="18" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black" FontFamily="Roboto"/>
+                            <!--<Label Text="{Binding Row4, Mode=TwoWay}" HorizontalTextAlignment="Center" FontSize="12" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black" FontFamily="Roboto"/>-->
+                        </StackLayout>
+
+                    <StackLayout Orientation="Vertical"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" IsVisible="{Binding IsDetailed, Mode=TwoWay}" Spacing="1" Padding="0">
+                            <Label Text="{Binding Row1, Mode=TwoWay}" HorizontalTextAlignment="Center" FontSize="18" IsVisible="{Binding HasDetail1, Mode=TwoWay}" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black" FontFamily="Roboto"/>
+                            <Label Text="{Binding Row2, Mode=TwoWay}" HorizontalTextAlignment="Center" FontSize="18" IsVisible="{Binding HasDetail2, Mode=TwoWay}" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black" FontFamily="Roboto"/>
+                            <Label Text="{Binding Row3, Mode=TwoWay}" HorizontalTextAlignment="Center" FontSize="18" IsVisible="{Binding HasDetail3, Mode=TwoWay}" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black" FontFamily="Roboto"/>
+                            <!--<Label Text="{Binding Row4, Mode=TwoWay}" HorizontalTextAlignment="Center" FontSize="12" IsVisible="{Binding HasDetail4, Mode=TwoWay}" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black" FontFamily="Roboto"/>-->
+                    </StackLayout>
+                    
+                    <!--Detail1 SectionTitle1-->
+                    <StackLayout Orientation="Vertical"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" IsVisible="{Binding IsMega, Mode=TwoWay}" Spacing="1" Padding="0">
+                        <Label Text="{Binding Row1, Mode=TwoWay}" HorizontalTextAlignment="Center" IsVisible="{Binding HasSectionTitle1, Mode=TwoWay}" FontSize="18" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black"/>
+                        <Label Text="{Binding Row2, Mode=TwoWay}" HorizontalTextAlignment="Center" IsVisible="{Binding HasSectionTitle2, Mode=TwoWay}" FontSize="18" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black"/>
+                        <Label Text="{Binding Row3, Mode=TwoWay}" HorizontalTextAlignment="Center" IsVisible="{Binding HasSectionTitle3, Mode=TwoWay}" FontSize="18" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black"/>
+                        <!--<Label Text="{Binding Row4, Mode=TwoWay}" HorizontalTextAlignment="Center" IsVisible="{Binding HasSectionTitle4, Mode=TwoWay}" FontSize="12" MaxLines="1" LineBreakMode="TailTruncation" TextColor="Black"/>-->
+                    </StackLayout>
+
+                    <Label
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    IsVisible="{Binding HasViewMore, Mode=TwoWay}"
+                    Text="{Binding ViewMore, Mode=TwoWay, FallbackValue='View More'}" TranslationY="-5"
+                        TextColor="Gray"/>
+
+                        <Image
+                        HeightRequest="80" WidthRequest="220"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Aspect="AspectFill"
+                        IsVisible="{Binding HasImage, Mode=TwoWay}">
+                            <Image.Source>
+                                <UriImageSource Uri="{Binding Image, Mode=TwoWay}" 
+			                                CacheValidity="14" 
+			                                CachingEnabled="true"/>
+                            </Image.Source>
+                        </Image>
+                </StackLayout>
+
+                <Grid x:Name="stkRowBottom"  Grid.Row="2"
+                                ColumnDefinitions="5*,5*" 
+                                RowDefinitions="*" 
+                                      VerticalOptions="End">
+                    <Label Text="{Binding TokType, Mode=TwoWay}"
+                                    FontAttributes="Bold" FontFamily="Roboto"
+                                    TextColor="Black"
+                                    FontSize="10"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="1"
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    HorizontalOptions="Start"/>
+                    <Label Text="{Binding Category, Mode=TwoWay}"
+                                    FontAttributes="Bold" FontFamily="Roboto"
+                                    TextColor="Black"
+                                    FontSize="10"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="1"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    HorizontalOptions="End"/>
+                        <Image Grid.Row="0" Grid.ColumnSpan="2" TranslationY="-5" Aspect="Fill" HorizontalOptions="Center" HeightRequest="21"  WidthRequest="21" Source="purple_gem.png"/>
+                </Grid>
+                
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:ToksViewModel}}, Path=ItemTapped, Mode=TwoWay}"		
+                                    CommandParameter="{Binding ., Mode=TwoWay}">
+                    </TapGestureRecognizer>
+                </Grid.GestureRecognizers>
+            </Grid>
+            </Frame>
+
+        </Frame>
+    </ContentView.Content>
+</ContentView>

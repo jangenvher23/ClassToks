@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:ClassToksV2.Views"
+             x:Class="ClassToksV2.Views.TokInfoPage"
+             xmlns:local="clr-namespace:ClassToksV2"
+             Title="{Binding Title}"
+             Visual="Material">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior>
+            <BackButtonBehavior.TextOverride>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="iOS" Value=" " />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </BackButtonBehavior.TextOverride>
+        </BackButtonBehavior>
+    </Shell.BackButtonBehavior>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding ActionsTokCommand}" Text="Actions" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    
+    <views:KeyboardView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="93*" />
+            <RowDefinition Height="07*" />
+        </Grid.RowDefinitions>
+        
+        <ScrollView Grid.Row="0" Orientation="Vertical">
+            <StackLayout Spacing="5" Padding="5,10,5,5" Orientation="Vertical">
+            <StackLayout x:Name="stkRowTop" Orientation="Horizontal">
+                <Grid 
+                ColumnDefinitions="*" 
+                RowDefinitions="*">
+                    <!-- Profile Circle Image -->
+                    <Ellipse
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="48"
+                    HeightRequest="48"
+                    Stroke="#3F51B5"
+                    StrokeThickness="2"
+                    Fill="White"/>
+                    <ImageButton
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="48"
+                        HeightRequest="48">
+                            <ImageButton.Clip>
+                            <EllipseGeometry
+                            Center="24,24"
+                            RadiusX="24"
+                            RadiusY="24"/>
+                        </ImageButton.Clip>
+                        <ImageButton.Source>
+                                <UriImageSource Uri="{Binding Item.UserPhoto, Mode=TwoWay}" CacheValidity="14" CachingEnabled="true"/>
+                        </ImageButton.Source>
+                    </ImageButton>
+                </Grid>
+                    <Grid ColumnDefinitions="*" RowDefinitions="*,*" RowSpacing="0" Padding="3,0" HeightRequest="50" VerticalOptions="Start">
+                        <Label FontFamily="Roboto" Grid.Row="0" x:Name="btnUserDisplayName" Text="{Binding Item.UserDisplayName, Mode=TwoWay}" FontSize="14"  BackgroundColor="Transparent" TextColor="Black" TextTransform="None" FontAttributes="Bold" Margin="0"
+                               HeightRequest="5" VerticalTextAlignment="End"/>
+                        <Label FontFamily="Roboto" Grid.Row="1" Text="{Binding Item.TitleId, Mode=TwoWay}"
+                               TextColor="Black"
+                               FontSize="13"
+                               LineBreakMode="TailTruncation"
+                               HorizontalTextAlignment="Start"
+                               MaxLines="1" Margin="0" HeightRequest="10" VerticalTextAlignment="Start"/>
+                    </Grid>
+                </StackLayout>
+
+            <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*" HeightRequest="35">
+                    <Label FontFamily="Roboto" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start" Text="Class Name:" FontSize="12" FontAttributes="Bold" VerticalTextAlignment="End"/>
+                    <Label FontFamily="Roboto" Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Start" Text="{Binding Item.TokType, Mode=TwoWay}" FontSize="12" VerticalTextAlignment="Start"/>
+
+                    <Label FontFamily="Roboto" Grid.Column="1" Grid.Row="0" HorizontalTextAlignment="Start" Text="Type:" FontAttributes="Bold" FontSize="12" VerticalTextAlignment="End"/>
+                    <Label FontFamily="Roboto" Grid.Column="1" Grid.Row="1" HorizontalTextAlignment="Start" Text="{Binding Item.TokGroup, Mode=TwoWay}" FontSize="12" VerticalTextAlignment="Start"/>
+
+                    <Label FontFamily="Roboto" Grid.Column="2" Grid.Row="0" HorizontalTextAlignment="Start" Text="Category:" FontSize="12" FontAttributes="Bold" VerticalTextAlignment="End"/>
+                    <Label FontFamily="Roboto" Grid.Column="2" Grid.Row="1" HorizontalTextAlignment="Start" Text="{Binding Item.Category, Mode=TwoWay}" FontSize="12" VerticalTextAlignment="Start"/>
+            </Grid>
+
+            <Label FontFamily="Roboto" Text="{Binding Item.PrimaryFieldText, Mode=TwoWay}" FontSize="22" FontAttributes="Bold" LineBreakMode="WordWrap" Margin="5,10,5,0"/>
+            <Label FontFamily="Roboto" Text="{Binding Item.SecondaryFieldText, Mode=TwoWay}" FontSize="16" IsVisible="{Binding Item.IsBasic, Mode=TwoWay}" Margin="5,10,5,0" LineBreakMode="WordWrap"/>
+
+            <StackLayout Orientation="Vertical"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                IsVisible="{Binding Item.IsDetailed, Mode=TwoWay}"
+                BindableLayout.ItemsSource="{Binding Items, Mode=TwoWay}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                            <Label FontFamily="Roboto" Text="{Binding ., Mode=TwoWay}" FontSize="Small"/>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical"
+            VerticalOptions="Start"
+            HorizontalOptions="Start"
+            IsVisible="{Binding Item.IsMegaTok, Mode=TwoWay}"
+            BindableLayout.ItemsSource="{Binding Sections.Items, Mode=TwoWay}">
+                    <BindableLayout.ItemTemplate x:DataType="local:TokSectionXF">
+                    <DataTemplate>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" Spacing="15" HeightRequest="16" Margin="0,4">
+                                <Grid RowDefinitions="*" ColumnDefinitions="*">
+                                    <Ellipse Grid.Row="0" Grid.Column="0"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="24"
+                                        HeightRequest="24"
+                                        Stroke="#000000"
+                                        StrokeThickness="1"
+                                        Fill="Black"/>
+                                    <Label FontFamily="Roboto" Grid.Row="0" Grid.Column="0" FontSize="10" Text="{Binding SectionNumber, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold"
+                                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" LineBreakMode="TailTruncation"/>
+                                </Grid>
+                                <Label FontFamily="Roboto" Text="{Binding Title, Mode=TwoWay}" FontSize="Small" FontAttributes="Bold" VerticalTextAlignment="Center" />
+                                <Button Text="View" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Black" TextTransform="None" VerticalOptions="Center"/>
+                                <Button Text="●●●" FontSize="7" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Black" TextTransform="None" VerticalOptions="Center" Clicked="Button_Clicked"/>
+                            </StackLayout>
+                        </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+
+                <ActivityIndicator x:Name="spinItemsListView" IsVisible="{Binding Sections.IsBusy, Mode=TwoWay}" IsRunning="True" Scale="{OnIdiom Phone=1.5, Tablet=2}" HeightRequest="{OnIdiom Phone=100, Tablet=50}"></ActivityIndicator>
+
+            <StackLayout Orientation="Vertical"
+            VerticalOptions="Start"
+            HorizontalOptions="Start"
+            IsVisible="{Binding Item.IsDetailBased, Mode=TwoWay}"
+            BindableLayout.ItemsSource="{Binding Item.Details, Mode=TwoWay}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                            <StackLayout Orientation="Horizontal">
+                                <Label FontFamily="Roboto" Text="• " VerticalOptions="Start" HorizontalOptions="Start"/>
+                                <Label FontFamily="Roboto" Text="{Binding ., Mode=TwoWay}" VerticalOptions="Start" HorizontalOptions="Start"/>
+                            </StackLayout>
+                        </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+
+
+            <Label FontFamily="Roboto" Text="English Translations" FontSize="16" IsVisible="{Binding Item.HasEnglishTranslation, Mode=TwoWay}" Margin="5,30,5,0" FontAttributes="Bold" LineBreakMode="WordWrap"/>
+            <StackLayout Orientation="Vertical"
+            VerticalOptions="Start"
+            HorizontalOptions="Start"
+            IsVisible="{Binding Item.HasEnglishTranslation, Mode=TwoWay}">
+                    <Label FontFamily="Montserrat" Text="{Binding Item.EnglishPrimaryFieldText, Mode=TwoWay}" FontSize="22" FontAttributes="Bold" LineBreakMode="WordWrap" Margin="5,10,5,0"/>
+                    <Label FontFamily="Roboto" Text="{Binding Item.EnglishSecondaryFieldText, Mode=TwoWay}" FontSize="16" IsVisible="{Binding Item.IsBasic, Mode=TwoWay}" Margin="5,10,5,0" LineBreakMode="WordWrap"/>
+
+                    <StackLayout Orientation="Vertical"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                IsVisible="{Binding Item.IsDetailBased, Mode=TwoWay}"
+                BindableLayout.ItemsSource="{Binding Item.EnglishDetails, Mode=TwoWay}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label FontFamily="Roboto" Text="• " VerticalOptions="Start" HorizontalOptions="Start"/>
+                                    <Label FontFamily="Roboto" Text="{Binding ., Mode=TwoWay}" VerticalOptions="Start" HorizontalOptions="Start"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+
+
+                </StackLayout>
+            
+
+            <Label FontFamily="Roboto" Text="Notes:" FontSize="Medium" IsVisible="{Binding Item.HasNotes, Mode=TwoWay}"/>
+            <Label FontFamily="Roboto" Text="{Binding Item.Notes, Mode=TwoWay}" FontSize="Small" IsVisible="{Binding Item.HasNotes, Mode=TwoWay}"/>
+                <Image
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+                    <Image.Source>
+                    <UriImageSource Uri="{Binding Item.Image, Mode=TwoWay}" 
+			        CacheValidity="14" 
+			        CachingEnabled="true"/>
+                </Image.Source>
+            </Image>
+
+
+                <Label FontFamily="Roboto" Text="Comments" FontSize="20" FontAttributes="Bold" LineBreakMode="WordWrap" Margin="5,20,5,0"/>
+
+                <StackLayout Orientation="Vertical"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                IsVisible="True"
+                BindableLayout.ItemsSource="{Binding Comments.Items, Mode=TwoWay}">
+                    <BindableLayout.ItemTemplate x:DataType="local:ReactionXF">
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" Spacing="15" HeightRequest="16" Margin="0,4">
+                                <!-- Profile Circle Image -->
+                                <Grid 
+                Grid.Column="0"
+                ColumnDefinitions="*" 
+                RowDefinitions="*" Margin="3">
+                                    <!-- Profile Circle Image -->
+                                    <Ellipse
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="40"
+                                        HeightRequest="40"
+                                        Stroke="#3F51B5"
+                                        StrokeThickness="2"
+                                        Fill="White"/>
+                                                        <ImageButton
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center"
+                                            WidthRequest="40"
+                                            HeightRequest="40">
+                                                            <ImageButton.Clip>
+                                                                <EllipseGeometry
+                                                Center="20,20"
+                                                RadiusX="20"
+                                                RadiusY="20"/>
+                                                            </ImageButton.Clip>
+                                                            <ImageButton.Source>
+                                                                <UriImageSource Uri="{Binding UserPhoto, Mode=TwoWay}" CacheValidity="14" CachingEnabled="true"/>
+                                                            </ImageButton.Source>
+                                                        </ImageButton>
+                                                    </Grid>
+
+
+                                <Label FontFamily="Roboto" Text="{Binding Text, Mode=TwoWay}" FontSize="Small" FontAttributes="Bold" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+
+        <views:WaitingView Grid.Row="0" x:Name="waitingView" InputTransparent="True"
+                IsVisible="False" Margin="{OnIdiom Phone='50,300', Tablet='100,200'}"></views:WaitingView>
+
+        <Grid Grid.Row="1" ColumnDefinitions="1*,8*,1*" TranslationY="-45" BackgroundColor="White">
+            <!-- Profile Circle Image -->
+            <Grid 
+                Grid.Column="0"
+                ColumnDefinitions="*" 
+                RowDefinitions="*" Margin="3">
+                <!-- Profile Circle Image -->
+                <Ellipse
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Stroke="#3F51B5"
+                    StrokeThickness="2"
+                    Fill="White"/>
+                <ImageButton
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="40"
+                        HeightRequest="40">
+                    <ImageButton.Clip>
+                        <EllipseGeometry
+                            Center="20,20"
+                            RadiusX="20"
+                            RadiusY="20"/>
+                    </ImageButton.Clip>
+                    <ImageButton.Source>
+                        <UriImageSource Uri="{Binding Item.UserPhoto, Mode=TwoWay}" CacheValidity="14" CachingEnabled="true"/>
+                    </ImageButton.Source>
+                </ImageButton>
+            </Grid>
+            <!-- Comment Box -->
+            <Entry x:Name="txtComment"  Grid.Column="1" Placeholder="Add a comment..." HeightRequest="22" TextChanged="Entry_TextChanged"/>
+            <!-- Post Button -->
+            <Button Grid.Column="2" x:Name="btnPost" Text="Post" FontFamily="Roboto" HeightRequest="22" IsEnabled="False" Clicked="btnPost_Clicked"/>
+        </Grid>
+    </views:KeyboardView>
+    
+    
+</ContentPage>

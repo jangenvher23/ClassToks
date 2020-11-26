@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokkepedia.iOS.Views.TokBackPage"
+             xmlns:flip="clr-namespace:Tokkepedia.iOS"
+             Title="Tok Back">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                0, 20, 0, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Grid>
+
+        <Label
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Text="Tok Back" />
+
+        <flip:XNFlipView x:Name="XNFlipViewControl1" Grid.Row="1" IsVertical="True">
+
+            <flip:XNFlipView.FrontView>
+                <Frame
+                    Margin="10"
+                    Padding="0"
+                    BackgroundColor="#FFFFFF"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    OutlineColor="Black">
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="This is front view"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </Frame>
+            </flip:XNFlipView.FrontView>
+
+            <flip:XNFlipView.BackView>
+                <Frame
+                    Margin="10"
+                    Padding="0"
+                    BackgroundColor="#FFFFFF"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    OutlineColor="Black">
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="This is back view"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </Frame>
+            </flip:XNFlipView.BackView>
+
+            <flip:XNFlipView.GestureRecognizers>
+                <TapGestureRecognizer
+                Tapped="flipItButton_OnClicked"
+                NumberOfTapsRequired="1" />
+            </flip:XNFlipView.GestureRecognizers>
+
+        </flip:XNFlipView>
+
+        <Button
+            x:Name="flipItButton"
+            Grid.Row="3"
+            Clicked="flipItButton_OnClicked"
+            Text="Flip it!" />
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+    </Grid>
+
+</ContentPage>

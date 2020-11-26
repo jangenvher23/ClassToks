@@ -1,0 +1,349 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia\\Tokkepedia.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
+        "projectName": "Tokkepedia.Shared",
+        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
+        "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\NuGet.Config",
+          "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/Tokket/_packaging/Tokket.Tokkepedia/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "CommonServiceLocator": {
+              "target": "Package",
+              "version": "[2.0.5, )"
+            },
+            "Microsoft.AppCenter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "MvvmLightLibs": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "Tokket.Tokkepedia": {
+              "target": "Package",
+              "version": "[0.0.1.74, )"
+            },
+            "Xam.Plugins.Settings": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.6.0-pre4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia\\Tokkepedia.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia\\Tokkepedia.csproj",
+        "projectName": "Tokkepedia",
+        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia\\Tokkepedia.csproj",
+        "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\NuGet.Config",
+          "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid10.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/Tokket/_packaging/Tokket.Tokkepedia/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid10.0": {
+            "projectReferences": {
+              "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
+                "projectPath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid10.0": {
+          "dependencies": {
+            "FlexboxLayoutXamarinBindingAndroid": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Glide.Xamarin": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            },
+            "Karamunting.Android.HDodenhof.CircleImageView": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.AppCenter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "MvvmLight": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
+            },
+            "MvvmLightAndroidSupport": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
+            },
+            "MvvmLightLibs": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "Naxam.expandablelayout.Droid": {
+              "target": "Package",
+              "version": "[1.6.0.1, )"
+            },
+            "Plugin.InAppBilling": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Plugin.Permissions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "Tokket.Tokkepedia": {
+              "target": "Package",
+              "version": "[0.0.1.74, )"
+            },
+            "Xamarin.Android.Arch.Core.Common": {
+              "target": "Package",
+              "version": "[1.1.1.3, )"
+            },
+            "Xamarin.Android.Arch.Lifecycle.Common": {
+              "target": "Package",
+              "version": "[1.1.1.3, )"
+            },
+            "Xamarin.Android.Arch.Lifecycle.ViewModel": {
+              "target": "Package",
+              "version": "[1.1.1.3, )"
+            },
+            "Xamarin.Android.PhotoView": {
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
+            "Xamarin.Android.ShimmerLayout": {
+              "target": "Package",
+              "version": "[0.5.0, )"
+            },
+            "Xamarin.Android.Support.Annotations": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Collections": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Compat": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Constraint.Layout": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Xamarin.Android.Support.Core.UI": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Core.Utils": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.CursorAdapter": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.CustomTabs": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Exif": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Fragment": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Interpolator": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Loader": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Media.Compat": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.SwipeRefreshLayout": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.ViewPager": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v4": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v7.AppCompat": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v7.Palette": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.AndroidX.AppCompat.Resources": {
+              "target": "Package",
+              "version": "[1.1.0.1, )"
+            },
+            "Xamarin.AndroidX.ConstraintLayout": {
+              "target": "Package",
+              "version": "[1.1.3, )"
+            },
+            "Xamarin.AndroidX.ExifInterface": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Xamarin.AndroidX.Legacy.Support.V4": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Xamarin.AndroidX.Lifecycle.LiveData": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Xamarin.AndroidX.Palette": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Xamarin.AndroidX.Preference": {
+              "target": "Package",
+              "version": "[1.1.1.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.6.0-pre4, )"
+            },
+            "Xamarin.Google.Android.Material": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Xamarin.GooglePlayServices.Plus": {
+              "target": "Package",
+              "version": "[71.1600.4, )"
+            },
+            "XamarinAndroidImageCropper": {
+              "target": "Package",
+              "version": "[2.5.1, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

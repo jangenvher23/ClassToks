@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:ClassToksV2.Views"
+             x:Class="ClassToksV2.Views.AddEditSetPage"
+             Title=""
+             Visual="Material">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior>
+            <BackButtonBehavior.TextOverride>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="iOS" Value=" " />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </BackButtonBehavior.TextOverride>
+        </BackButtonBehavior>
+    </Shell.BackButtonBehavior>
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                20, 0, 20, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddEditSetCommand}" Text="Add Class Set" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid 
+        ColumnDefinitions="*" 
+        RowDefinitions="*">
+        <ScrollView Grid.Row="0">
+        <StackLayout Spacing="10" Padding="0">
+
+
+            <Label
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Type"/>
+                <Picker x:Name="pckTokFormat" SelectedIndexChanged="pckTokFormat_SelectedIndexChanged" Title="Type" SelectedItem="{Binding Source=Item.TokGroup, Mode=TwoWay}">
+                    <Picker.Items>
+                        <x:String>Basic</x:String>
+                        <x:String>Detailed</x:String>
+                        <x:String>Mega</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label x:Name="lblClassName"
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Class Name" />
+            <Entry x:Name="txtTokType" IsVisible="True"  Placeholder="i.e. Math" Text="{Binding Item.TokType, Mode=TwoWay}"></Entry>
+
+            <Label x:Name="lblName" FontSize="20" HorizontalTextAlignment="Start" Text="Name" />
+            <Entry x:Name="txtName" IsVisible="True"  Placeholder="Set Name" Text="{Binding Item.Name, Mode=TwoWay}"></Entry>
+            <Label x:Name="lblNameCounter" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+            <Label x:Name="lblDescription" FontSize="20" HorizontalTextAlignment="Start" Text="Set Description" />
+                <Entry x:Name="txtDescription" IsVisible="True"  Placeholder="Secondary" Text="{Binding Item.Description}"></Entry>
+
+            <BoxView HeightRequest="5" BackgroundColor="Black"/>
+
+            <Label x:Name="lblColor"
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Color" />
+            <Button x:Name="btnColor" Text="Select Color" TextTransform="None" FontAttributes="Bold" BackgroundColor="Black" TextColor="White"></Button>
+
+            </StackLayout>
+    </ScrollView>
+        <views:WaitingView Grid.Row="0" x:Name="waitingView" InputTransparent="True"
+                IsVisible="False" Margin="200"></views:WaitingView>
+    </Grid>
+    
+    
+
+        
+</ContentPage>

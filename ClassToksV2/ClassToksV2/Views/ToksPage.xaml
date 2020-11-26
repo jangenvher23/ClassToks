@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassToksV2.Views.ToksPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:ClassToksV2.ViewModels"  
+             xmlns:model="clr-namespace:ClassToksV2.Models" 
+             xmlns:shared="clr-namespace:Tokkepedia.Shared.Models;assembly=Tokkepedia.Shared" xmlns:classtoks="clr-namespace:ClassToksV2" xmlns:views="clr-namespace:ClassToksV2.Views.Tok.View"
+             x:Name="toksPage"
+             Visual="Material">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior>
+            <BackButtonBehavior.TextOverride>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="iOS" Value=" "/>
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </BackButtonBehavior.TextOverride>
+        </BackButtonBehavior>
+    </Shell.BackButtonBehavior>
+    
+    <Shell.TitleView>
+        <Label Text="The social and playable knowledge sharing app" TextColor="White" LineBreakMode="WordWrap" FontSize="Small" FontFamily="Montserrat"/>
+    </Shell.TitleView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="btnFilter" Clicked="btnFilter_Clicked" Text="FILTER"/>
+        <ToolbarItem Command="{Binding AddTokCommand}" Text="Add Tok" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="UserDisplayNameStyle" TargetType="Label">
+                <Setter Property="Label.BackgroundColor" Value="Transparent" />
+                <Setter Property="Label.TextColor" Value="White" />
+                <Setter Property="Label.FontAttributes" Value="Bold" />
+                <Setter Property="Label.FontSize" Value="8" />
+                <Setter Property="Label.LineBreakMode" Value="TailTruncation" />
+            </Style>
+            <Style x:Key="PrimaryTextStyle" TargetType="Label">
+                <Setter Property="Label.BackgroundColor" Value="Transparent" />
+                <Setter Property="Label.TextColor" Value="White" />
+                <Setter Property="Label.FontAttributes" Value="Bold" />
+                <Setter Property="Label.FontSize" Value="16" />
+                <Setter Property="Label.LineBreakMode" Value="TailTruncation" />
+            </Style>
+            <Style x:Key="CategoryStyle" TargetType="Label">
+                <Setter Property="Label.BackgroundColor" Value="Transparent" />
+                <Setter Property="Label.TextColor" Value="White" />
+                <Setter Property="Label.FontSize" Value="6" />
+                <Setter Property="Label.LineBreakMode" Value="TailTruncation" />
+            </Style>
+
+            <DataTemplate x:Key="TokTilesTemplate">
+                <views:TokTilesFeed/>
+            </DataTemplate>
+            <DataTemplate x:Key="TokCardsTemplate">
+                <views:TokCardsFeed/>
+            </DataTemplate>
+            <model:TokFeedTemplateSelector x:Key="FeedSelector"
+                                             TokTile="{StaticResource TokTilesTemplate}"
+                                             TokCard="{StaticResource TokCardsTemplate}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+
+    <RefreshView x:Name="lstTokTiles" x:DataType="local:ToksViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <RefreshView.Content>
+            <CollectionView x:Name="ItemsListView"
+                    ItemsSource="{Binding Items}"
+                    RemainingItemsThreshold="{Binding RemainingItemsThreshold}" RemainingItemsThresholdReachedCommand="{Binding ThresholdReachedCommand}" Margin="0">
+                <CollectionView.ItemsLayout>
+
+                    <GridItemsLayout Orientation="Vertical"
+                            Span="{OnIdiom Phone=1, Tablet=2}"
+                            HorizontalItemSpacing="1"
+                            VerticalItemSpacing="1"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                            EndPoint="1,0">
+                        <GradientStop Color="LightGray"
+                        Offset="0.1"/>
+                        <GradientStop Color="GhostWhite"
+                        Offset="1.0"/>
+                    </LinearGradientBrush>
+                </CollectionView.Background>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <views:TokTileView BindingContext="{Binding .}" HeightRequest="200"></views:TokTileView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <Grid BackgroundColor="Transparent" HeightRequest="{Binding FooterHeight}" InputTransparent="True">
+                        <ActivityIndicator x:Name="spinItemsListView" IsRunning="True" Scale="{OnIdiom Phone=1.5, Tablet=2}" HeightRequest="{OnIdiom Phone=100, Tablet=50}"></ActivityIndicator>
+                    </Grid>
+                </CollectionView.Footer>
+            </CollectionView>
+        </RefreshView.Content>
+    </RefreshView>
+
+
+
+
+    <!--<CarouselView x:Name="lstFeeds" ItemTemplate="{StaticResource FeedSelector}">
+        <CarouselView.ItemsLayout>
+            <LinearItemsLayout Orientation="Horizontal" />
+        </CarouselView.ItemsLayout>
+        <CarouselView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>TokTile</x:String>
+                <x:String>TokCard</x:String>
+            </x:Array>
+        </CarouselView.ItemsSource>
+    </CarouselView>-->
+    
+
+    <!--<CarouselView>
+        <CarouselView.ItemsLayout>
+            <LinearItemsLayout Orientation="Horizontal" />
+        </CarouselView.ItemsLayout>
+        <CarouselView.ItemsSource>
+            <x:Array Type="{x:Type RefreshView}">
+                <RefreshView x:DataType="local:ToksViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                    <RefreshView.Content>
+                        <CollectionView x:Name="ItemsListView"
+                    ItemsSource="{Binding Items}"
+                    SelectionMode="None"
+                            Margin="1">
+                            <CollectionView.ItemsLayout>
+
+                                <GridItemsLayout Orientation="Vertical"
+                            Span="{OnIdiom Phone=1, Tablet=2}"
+                            VerticalItemSpacing="10"/>
+                                --><!--<LinearItemsLayout Orientation="Vertical"
+                            ItemSpacing="10" />--><!--
+                            </CollectionView.ItemsLayout>
+
+                            <CollectionView.Background>
+                                <LinearGradientBrush StartPoint="0,0"
+                            EndPoint="1,0">
+                                    <GradientStop Color="CadetBlue"
+                        Offset="0.1"/>
+                                    <GradientStop Color="SkyBlue"
+                        Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </CollectionView.Background>
+
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <views:TokTileView></views:TokTileView>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </RefreshView.Content>
+                </RefreshView>
+                --><!--<RefreshView x:DataType="local:ToksViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                    <RefreshView.Content>
+                        <CollectionView
+                    ItemsSource="{Binding Items}"
+                    SelectionMode="None"
+                            Margin="1">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical"
+                            Span="{OnIdiom Phone=1, Tablet=2}"
+                            VerticalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.Background>
+                            <LinearGradientBrush StartPoint="0,0"
+                            EndPoint="1,0">
+                                <GradientStop Color="CadetBlue"
+                        Offset="0.1"/>
+                                <GradientStop Color="SkyBlue"
+                        Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </CollectionView.Background>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame 
+                           BorderColor="Gray"
+                           CornerRadius="5"
+                           Padding="3"
+                           HasShadow="False"
+                           Margin="15" x:DataType="model:ClassTokXF"
+                           BackgroundColor="{Binding ColorXF}">
+
+                                    <Frame.Background>
+                                <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                                    <GradientStop Color="DarkOrange"
+                                  Offset="0.1"/>
+                                    <GradientStop Color="DarkGoldenrod"
+                                  Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                                    <StackLayout  Orientation="Vertical" Padding="10" VerticalOptions="FillAndExpand">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Grid 
+                                ColumnDefinitions="*" 
+                                RowDefinitions="*">
+                                                 --><!--Profile Circle Image--><!-- 
+                                                <Ellipse
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="48"
+                                        HeightRequest="48"
+                                        Stroke="#FFFF9900"
+                                        StrokeThickness="4"
+                                        Fill="White"/>
+                                                <Image
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="48"
+                                        HeightRequest="48">
+                                                    <Image.Clip>
+                                                        <EllipseGeometry
+                                                Center="24,24"
+                                                RadiusX="24"
+                                                RadiusY="24"/>
+                                                    </Image.Clip>
+                                                    <Image.Source>
+                                                        <UriImageSource Uri="{Binding UserPhoto}" 
+			                                CacheValidity="14" 
+			                                CachingEnabled="true"/>
+                                                    </Image.Source>
+                                                </Image>
+                                            </Grid>
+                                            <StackLayout Orientation="Vertical">
+                                                <Label Text="{Binding UserDisplayName}"  
+                                            Style="{DynamicResource UserDisplayNameStyle}"/>
+                                                <Label Text="{Binding TitleId}"  
+                                            Style="{DynamicResource CategoryStyle}"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                                            <Label Text="{Binding PrimaryFieldText}" 
+                                    Style="{DynamicResource PrimaryTextStyle}"/>
+                                            <Image
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center">
+                                                <Image.Source>
+                                                    <UriImageSource Uri="{Binding Image}" 
+			                                CacheValidity="14" 
+			                                CachingEnabled="true"/>
+                                                </Image.Source>
+                                            </Image>
+                                        </StackLayout>
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:ToksViewModel}}, Path=ItemTapped}"		
+                                    CommandParameter="{Binding .}">
+                                            </TapGestureRecognizer>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    </RefreshView.Content>
+                    
+                </RefreshView>--><!--
+            </x:Array>
+        </CarouselView.ItemsSource>
+    </CarouselView>-->
+</ContentPage>

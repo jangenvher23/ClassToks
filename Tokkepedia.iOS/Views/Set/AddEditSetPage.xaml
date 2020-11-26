@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokkepedia.iOS.Views.AddEditSetPage"
+             xmlns:flip="clr-namespace:Tokkepedia.iOS"
+             Title="Add Class Set">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                20, 0, 20, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="10,0">
+            
+            <Label
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Enter the Set info" />
+
+            <Label
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Type" />
+            <Picker x:Name="pckTokGroup" SelectedIndexChanged="pckTokGroup_SelectedIndexChanged" Title="Type">
+                <Picker.Items>
+                    <x:String>Basic</x:String>
+                    <x:String>Detailed</x:String>
+                    <x:String>Mega</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label x:Name="lblClassName"
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Class Name" />
+            <Entry x:Name="txtTokType" IsVisible="True"  Placeholder="i.e. Math"></Entry>
+            
+            <Label x:Name="lblName" FontSize="20" HorizontalTextAlignment="Start" Text="Name" />
+            <Entry x:Name="txtName" IsVisible="True"  Placeholder="Name"></Entry>
+            <Label x:Name="lblNameCounter" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+            <Label x:Name="lblDescription" FontSize="20" HorizontalTextAlignment="Start" Text="Description" />
+            <Entry x:Name="txtDescription" IsVisible="True"  Placeholder="Description"></Entry>
+            
+            <Button
+            x:Name="btnAddEditSet"
+            Clicked="btnAddEditSet_Clicked"
+            Text="Add/Edit Set" />
+
+        </StackLayout>
+    </ScrollView>
+
+        
+</ContentPage>

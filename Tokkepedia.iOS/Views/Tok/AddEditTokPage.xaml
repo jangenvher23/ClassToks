@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokkepedia.iOS.Views.AddEditTokPage"
+             xmlns:flip="clr-namespace:Tokkepedia.iOS"
+             Title="Add Tok">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                20, 0, 20, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="10,0">
+            
+            <Label
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Text="Add Class Tok" />
+
+            <Label
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Post a copy to:" />
+
+            <StackLayout Orientation="Horizontal" x:Name="stkCopy" HeightRequest="50" VerticalOptions="Start">
+                <CheckBox x:Name="chkPrivate" VerticalOptions="Start"></CheckBox>
+                <Label FontSize="10" HorizontalTextAlignment="Start" Text="Private" Padding="0,0,20,0"/>
+
+                <CheckBox x:Name="chkGroup" VerticalOptions="Start"></CheckBox>
+                <Label FontSize="10" HorizontalTextAlignment="Start" Text="Group" Padding="0,0,20,0"/>
+                <CheckBox x:Name="chkPublic" VerticalOptions="Start"></CheckBox>
+                <Label FontSize="10" HorizontalTextAlignment="Start" Text="Public" />
+            </StackLayout>
+
+            <Label
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Type" />
+            <Picker x:Name="pckTokGroup" SelectedIndexChanged="pckTokGroup_SelectedIndexChanged" Title="Type" SelectedItem="{Binding Source=TokGroup, Mode=TwoWay}">
+                <Picker.Items>
+                    <x:String>Basic</x:String>
+                    <x:String>Detailed</x:String>
+                    <x:String>Mega</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker x:Name="pckTokType" IsVisible="False" Title="Tok Type">
+                <Picker.Items>
+                    <x:String>Basic</x:String>
+                    <x:String>Detailed</x:String>
+                    <x:String>Mega</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            <Label x:Name="lblClassName"
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Class Name" />
+            <Entry x:Name="txtTokType" IsVisible="True"  Placeholder="i.e. Math"></Entry>
+
+            <Label x:Name="lblCategory"
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Category" />
+            <Entry x:Name="txtCategory" IsVisible="True"  Placeholder="i.e. Algebra" Text=""></Entry>
+
+            <Label x:Name="lblPrimary" FontSize="20" HorizontalTextAlignment="Start" Text="Primary" />
+            <Entry x:Name="txtPrimary" IsVisible="True"  Placeholder="Primary" Text=""></Entry>
+            <Label x:Name="lblPrimaryCounter" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+            <Label x:Name="lblSecondary" FontSize="20" HorizontalTextAlignment="Start" Text="Secondary" />
+            <Entry x:Name="txtSecondary" IsVisible="True"  Placeholder="Secondary" Text=""></Entry>
+
+            <ScrollView x:Name="scrollDetails" IsVisible="False" HeightRequest="250">
+                <StackLayout x:Name="stkDetails" IsVisible="False">
+                    <Label x:Name="lblDetail1" FontSize="20" HorizontalTextAlignment="Start" Text="Detail 1" />
+                    <Entry x:Name="txtDetail1" IsVisible="True"  Placeholder="" MaxLength="200"></Entry>
+                    <Label x:Name="lblDetail1Counter" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+                    <Label x:Name="lblDetail2" FontSize="20" HorizontalTextAlignment="Start" Text="Detail 2" />
+                    <Entry x:Name="txtDetail2" IsVisible="True"  Placeholder="i.e. Primary" MaxLength="200"></Entry>
+                    <Label x:Name="lblDetail2Counter" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+                    <Label x:Name="lblDetail3" FontSize="20" HorizontalTextAlignment="Start" Text="Detail 3" />
+                    <Entry x:Name="txtDetail3" IsVisible="True"  Placeholder="Detail 3" MaxLength="200"></Entry>
+                    <Label x:Name="lblDetail3Counter" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+                    <Label x:Name="lblDetail4" IsVisible="False" FontSize="20" HorizontalTextAlignment="Start" Text="Detail 4" />
+                    <Entry x:Name="txtDetail4" IsVisible="False"  Placeholder="Detail 4" MaxLength="200"></Entry>
+                    <Label x:Name="lblDetail4Counter" IsVisible="False" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+                    <Label x:Name="lblDetail5" IsVisible="False" FontSize="20" HorizontalTextAlignment="Start" Text="Detail 5" />
+                    <Entry x:Name="txtDetail5" IsVisible="False"  Placeholder="Detail 5" MaxLength="200"></Entry>
+                    <Label x:Name="lblDetail5Counter" IsVisible="False" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+                    <Label x:Name="lblDetail6" IsVisible="False" FontSize="20" HorizontalTextAlignment="Start" Text="Detail 6" />
+                    <Entry x:Name="txtDetail6" IsVisible="False"  Placeholder="Detail 6" MaxLength="200"></Entry>
+                    <Label x:Name="lblDetail6Counter" IsVisible="False" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+                    <Label x:Name="lblDetail7" IsVisible="False" FontSize="20" HorizontalTextAlignment="Start" Text="Detail 7" />
+                    <Entry x:Name="txtDetail7" IsVisible="False"  Placeholder="Detail 7" MaxLength="200"></Entry>
+                    <Label x:Name="lblDetail7Counter" IsVisible="False" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+                    <Label x:Name="lblDetail8" IsVisible="False" FontSize="20" HorizontalTextAlignment="Start" Text="Detail 8" />
+                    <Entry x:Name="txtDetail8" IsVisible="False"  Placeholder="Detail 8" MaxLength="200"></Entry>
+                    <Label x:Name="lblDetail8Counter" IsVisible="False" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+                    <Label x:Name="lblDetail9" IsVisible="False" FontSize="20" HorizontalTextAlignment="Start" Text="Detail 9" />
+                    <Entry x:Name="txtDetail9" IsVisible="False"  Placeholder="Detail 9" MaxLength="200"></Entry>
+                    <Label x:Name="lblDetail9Counter" IsVisible="False" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+                    <Label x:Name="lblDetail10" IsVisible="False" FontSize="20" HorizontalTextAlignment="Start" Text="Detail 10" />
+                    <Entry x:Name="txtDetail10" IsVisible="False"  Placeholder="Detail 10" MaxLength="200"></Entry>
+                    <Label x:Name="lblDetail10Counter" IsVisible="False" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray" />
+
+                
+                </StackLayout>
+            </ScrollView>
+            
+            <StackLayout x:Name="stkAddRemoveDetails" Orientation="Horizontal" HorizontalOptions="FillAndExpand" IsVisible="False">
+                <Button x:Name="btnAddDetail" IsVisible="True"  Text="+ Add Detail" BackgroundColor="CadetBlue" TextColor="Black" Clicked="btnAddDetail_Clicked"></Button>
+                <Button x:Name="btnRemoveDetail" IsVisible="False"  Text="- Remove Detail" BackgroundColor="PaleVioletRed" TextColor="Black" Clicked="btnRemoveDetail_Clicked"></Button>
+            </StackLayout>
+
+            <StackLayout x:Name="stkSections" IsVisible="False">
+                <Label x:Name="lblSection1" FontSize="20" HorizontalTextAlignment="Start" Text="Section 1" />
+                <Editor x:Name="txtSection1" IsVisible="True"  Placeholder="" MaxLength="5000"></Editor>
+                <Label x:Name="lblSection1Counter" FontSize="10" HorizontalTextAlignment="End" Text="0 / 5000" TextColor="LightGray" />
+            </StackLayout>
+            
+
+            <Label x:Name="lblNotes"
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Notes (2000 characters max)" />
+            <Editor x:Name="txtNotes" Placeholder="Notes..."></Editor>
+
+            <ActivityIndicator x:Name="spinner" IsVisible="False" IsRunning="False"></ActivityIndicator>
+            
+            <Button
+            x:Name="btnAddEditTok"
+            Clicked="btnAddEditTok_Clicked"
+            Text="Add/Edit Tok" />
+
+        </StackLayout>
+    </ScrollView>
+
+        
+</ContentPage>

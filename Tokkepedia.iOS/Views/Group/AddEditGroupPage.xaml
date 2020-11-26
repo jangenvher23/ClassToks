@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokkepedia.iOS.Views.AddEditGroupPage"
+             xmlns:flip="clr-namespace:Tokkepedia.iOS"
+             Title="Add Class Group">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                20, 0, 20, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="10,0">
+
+            <Label
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Enter Class Group Information"
+            FontAttributes="Bold"/>
+
+            <Label x:Name="lblName" FontSize="20" HorizontalTextAlignment="Start" Text="Group Name" />
+            <Entry x:Name="txtName" IsVisible="True"  Placeholder="" MaxLength="100"></Entry>
+
+            <Label x:Name="lblDescription" FontSize="20" HorizontalTextAlignment="Start" Text="Description" />
+            <Entry x:Name="txtDescription" IsVisible="True"  Placeholder="" MaxLength="5000"></Entry>
+
+            <Label x:Name="lblSchool" FontSize="20" HorizontalTextAlignment="Start" Text="School" />
+            <Entry x:Name="txtSchool" IsVisible="True"  Placeholder="" MaxLength="100"></Entry>
+
+            <Button
+            x:Name="btnAddEditGroup"
+            Clicked="btnAddEditGroup_Clicked"
+            Text="Add/Edit Group" />
+
+        </StackLayout>
+    </ScrollView>
+
+        
+</ContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokkepedia.iOS.Views.SetsPage"
+             xmlns:flip="clr-namespace:Tokkepedia.iOS"
+             Title="Sets">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                20, 0, 20, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="btnTokCards" Text="Tok Cards" Order="Secondary" Priority="0" Clicked="btnTokCards_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="btnTokMatch" Text="Tok Match" Order="Secondary" Priority="1" Clicked="btnTokMatch_Clicked"></ToolbarItem>
+        <ToolbarItem x:Name="btnTokChoice" Text="Tok Choice" Order="Secondary" Priority="2" Clicked="btnTokChoice_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <!--<RefreshView x:Name="lstSetsRefresh" Refreshing="lstSetsRefresh_Refreshing">-->
+        <CollectionView x:Name="lstSets" RemainingItemsThreshold="25" RemainingItemsThresholdReached="lstSets_RemainingItemsThresholdReached">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="2"
+                       Source="{Binding Image}"
+                       Aspect="AspectFill"
+                       HeightRequest="60"
+                       WidthRequest="60" />
+                        <Label Grid.Column="1"
+                       Text="{Binding Name}"
+                       FontAttributes="Bold" />
+                        <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding Description}"
+                       FontAttributes="Italic"
+                       VerticalOptions="End" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    <!--</RefreshView>-->
+    
+    
+
+
+</ContentPage>

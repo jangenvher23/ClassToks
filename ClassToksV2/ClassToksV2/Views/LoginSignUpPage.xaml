@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:ClassToksV2.Views"
+             mc:Ignorable="d"
+             x:Class="ClassToksV2.Views.LoginSignUpPage"
+             Shell.NavBarIsVisible="False"
+             x:Name="loginSignUpPage"
+             Visual="Material">
+    <ContentPage.Content>
+        <Grid 
+        ColumnDefinitions="*" 
+        RowDefinitions="*">
+            <Image Grid.Row="0" Source="bg_classtok.png" Aspect="Fill" VerticalOptions="Fill"></Image>
+            <ScrollView BackgroundColor="Transparent">
+                <StackLayout Grid.Row="0" Padding="{OnIdiom Phone=40, Tablet=100}" VerticalOptions="Center" Spacing="5" BackgroundColor="Transparent">
+                <Image HeightRequest="{OnIdiom Phone=50, Tablet=150}" Source="classtok_text.png" Aspect="AspectFit"></Image>
+
+                <Label
+                    FontSize="20"
+                    HorizontalTextAlignment="Start"
+                    Text="Account Type"
+                    IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}"/>
+                <Picker x:Name="pckAccountType" SelectedIndexChanged="pckAccountType_SelectedIndexChanged" Title="Type" SelectedItem="{Binding Source=User.AccountType, Mode=TwoWay}"
+                        IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}" HeightRequest="{OnIdiom Phone=40, Tablet=70}">
+                    <Picker.Items>
+                        <x:String>Individual</x:String>
+                        <x:String>Group</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <BoxView HeightRequest="5" BackgroundColor="Black" IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}"/>
+
+                <Label
+                    FontSize="20"
+                    HorizontalTextAlignment="Start"
+                    Text="Display Name"
+                    IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}"/>
+                    <Entry Placeholder="Display Name" Text="{Binding User.DisplayName, Mode=TwoWay}" ReturnType="Next" TabIndex="0" FontSize="Header" IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}" HeightRequest="{OnIdiom Phone=40, Tablet=70}"></Entry>
+
+                <Label
+                    FontSize="20"
+                    HorizontalTextAlignment="Start"
+                    Text="Birthday" IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}"/>
+                    <DatePicker x:Name="pckBirthday" IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}"></DatePicker>
+
+                <Label
+                    FontSize="20"
+                    HorizontalTextAlignment="Start"
+                    Text="Country (optional)" IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}"/>
+                    <Picker x:Name="pckCountry" SelectedIndexChanged="pckCountry_SelectedIndexChanged"  Title="Type" SelectedItem="{Binding Source=User.Country, Mode=TwoWay}" HeightRequest="{OnIdiom Phone=40, Tablet=70}"
+                        IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}">
+                    <Picker.Items>
+                        <x:String>United States</x:String>
+                        <x:String>Group</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label
+                FontSize="20"
+                HorizontalTextAlignment="Start"
+                Text="State"
+                    IsVisible="False"/>
+                    <Picker x:Name="pckState" IsVisible="False" SelectedIndexChanged="pckCountry_SelectedIndexChanged"  Title="Type" SelectedItem="{Binding Source=User.State, Mode=TwoWay}" HeightRequest="{OnIdiom Phone=40, Tablet=70}">
+                    <Picker.Items>
+                        <x:String>California</x:String>
+                        <x:String>Group</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Entry x:Name="txtEmail" Placeholder="Email" Text="{Binding Email, Mode=TwoWay}" ReturnType="Next" TabIndex="0" FontSize="Header" WidthRequest="50" HeightRequest="{OnIdiom Phone=40, Tablet=70}"></Entry>
+                <Entry IsVisible="{Binding IsLoginMode, Mode=TwoWay, FallbackValue=True}" x:Name="txtPasswordLogin" Placeholder="Password" Text="{Binding Password, Mode=TwoWay}" ReturnType="Done" ReturnCommand="{Binding LoginCommand}" TabIndex="1" IsPassword="True" FontSize="Header" HeightRequest="{OnIdiom Phone=40, Tablet=70}"></Entry>
+
+                <Entry IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}" x:Name="txtPasswordSignUp" Placeholder="Password" ReturnType="Done" IsPassword="True" FontSize="Header"></Entry>
+                <Entry IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}" x:Name="txtPasswordConfirm"  Placeholder="Confirm Password" TabIndex="1" IsPassword="True" FontSize="Header"></Entry>
+
+                <Button IsVisible="{Binding IsLoginMode, Mode=TwoWay, FallbackValue=True}" x:Name="btnLogin" VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" HeightRequest="60"/>
+                <Button IsVisible="{Binding IsLoginMode, Mode=TwoWay, FallbackValue=True}" x:Name="btnGoToForgotPassword" Clicked="btnGoToForgotPassword_Clicked" Text="Forgot your password?" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Black" TextTransform="None" HeightRequest="50"></Button>
+                <Button x:Name="btnGoToSignUp" IsVisible="{Binding IsLoginMode, Mode=TwoWay, FallbackValue=True}" Command="{Binding GoToSignUpCommand}" Text="Not registered yet? Sign Up" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Black" TextTransform="None"></Button>
+
+                <!--Sign Up controls-->
+                <StackLayout Orientation="Horizontal" IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}">
+                    <CheckBox x:Name="chkTerms" VerticalOptions="Center"></CheckBox>
+                    <Button x:Name="btnTerms" IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}" Command="{Binding TermsCommand}" Text="I agree to the Terms of Service" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Black" TextTransform="None" VerticalOptions="Center"></Button>
+                </StackLayout>
+                <Button x:Name="btnSignUp" VerticalOptions="Center" Text="Register" Command="{Binding SignUpCommand}" IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}"/>
+                    <Button x:Name="btnSignUpCancel" Margin="30,0" VerticalOptions="Center" Text="Cancel" Command="{Binding GoToLoginCommand}" IsVisible="{Binding IsSignUpMode, Mode=TwoWay, FallbackValue=False}" BackgroundColor="Gray"/>
+                </StackLayout>
+            </ScrollView>
+
+            <views:WaitingView Grid.Row="0" x:Name="waitingView" InputTransparent="False"
+                IsVisible="{Binding IsLoading}" Margin="{OnIdiom Phone='50,300', Tablet='100,200'}"></views:WaitingView>
+        </Grid>
+        <!--{Binding IsLoading, Mode=TwoWay}-->
+        
+        
+    </ContentPage.Content>
+</ContentPage>

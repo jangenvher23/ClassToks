@@ -1,0 +1,86 @@
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/RecyclerClassGroupList"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="?android:attr/actionBarSize"
+            android:scrollbarStyle="outsideOverlay"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:divider="@android:color/transparent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:gravity="center"         
+         android:layout_marginTop="20dp"
+         app:layout_anchor="@+id/RecyclerClassGroupList"
+         app:layout_anchorGravity="center|top">
+         <ProgressBar
+            android:id="@+id/bottomProgress"
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"  
+            android:layout_marginBottom="60dp"
+            android:layout_height="26dp"
+            android:layout_width="26dp"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:indeterminate="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:layout_anchorGravity="center|top"
+        android:backgroundTint="#80000000"
+        android:background="@drawable/tileview_layout">
+        <TextView
+            android:id="@+id/progressBarinsideText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="5dp"/>
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_height="86dp"
+            android:layout_width="86dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_AddClassGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/addtokicon"
+        android:clickable="true"
+        android:backgroundTint="@color/colorAccent"
+        android:scaleType="fitXY"
+        app:borderWidth="0dp"
+        app:useCompatPadding="true"
+        app:layout_behavior="@string/fab_scroll_translation_autohide_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

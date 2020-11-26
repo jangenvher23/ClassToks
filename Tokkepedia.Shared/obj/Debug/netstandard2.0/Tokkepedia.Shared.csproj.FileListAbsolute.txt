@@ -1,0 +1,9 @@
+C:\Users\tokke\Desktop\ClassToks2\Tokkepedia\Tokkepedia.Shared\bin\Debug\netstandard2.0\Tokkepedia.Shared.deps.json
+C:\Users\tokke\Desktop\ClassToks2\Tokkepedia\Tokkepedia.Shared\bin\Debug\netstandard2.0\Tokkepedia.Shared.dll
+C:\Users\tokke\Desktop\ClassToks2\Tokkepedia\Tokkepedia.Shared\bin\Debug\netstandard2.0\Tokkepedia.Shared.pdb
+C:\Users\tokke\Desktop\ClassToks2\Tokkepedia\Tokkepedia.Shared\obj\Debug\netstandard2.0\Tokkepedia.Shared.csprojAssemblyReference.cache
+C:\Users\tokke\Desktop\ClassToks2\Tokkepedia\Tokkepedia.Shared\obj\Debug\netstandard2.0\Tokkepedia.Shared.AssemblyInfoInputs.cache
+C:\Users\tokke\Desktop\ClassToks2\Tokkepedia\Tokkepedia.Shared\obj\Debug\netstandard2.0\Tokkepedia.Shared.AssemblyInfo.cs
+C:\Users\tokke\Desktop\ClassToks2\Tokkepedia\Tokkepedia.Shared\obj\Debug\netstandard2.0\Tokkepedia.Shared.csproj.CoreCompileInputs.cache
+C:\Users\tokke\Desktop\ClassToks2\Tokkepedia\Tokkepedia.Shared\obj\Debug\netstandard2.0\Tokkepedia.Shared.dll
+C:\Users\tokke\Desktop\ClassToks2\Tokkepedia\Tokkepedia.Shared\obj\Debug\netstandard2.0\Tokkepedia.Shared.pdb

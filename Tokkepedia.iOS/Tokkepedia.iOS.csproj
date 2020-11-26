@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{94D1E0C7-AEEB-4259-BFA2-171214F50CFE}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{f1d599d5-32e4-4ac3-bfce-fa91478e30e4}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Tokkepedia.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Tokkepedia.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <ProvisioningType>automatic</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;_CLASSTOKS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>Apple Development: Brendan Onquit (FMMAVK6LWF)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchFastDev>true</MtouchFastDev>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;_CLASSTOKS;</DefineConstants>
+    <CodesignKey>Apple Development: Brendan Onquit (FMMAVK6LWF)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;_TOKKEPEDIA;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>Apple Development: Brendan Onquit (FMMAVK6LWF)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchFastDev>false</MtouchFastDev>
+    <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchSdkVersion>12.1</MtouchSdkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>Apple Development: Brendan Onquit (FMMAVK6LWF)</CodesignKey>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;_CLASSTOKS;</DefineConstants>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="FacebookLoginButton.cs" />
+    <Compile Include="LeftViewController.cs" />
+    <Compile Include="LeftViewController.designer.cs">
+      <DependentUpon>LeftViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GmailUserProfileModel.cs" />
+    <Compile Include="PickerViewController.cs" />
+    <Compile Include="PickerViewController.designer.cs">
+      <DependentUpon>PickerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\CustomDatePickerRenderer.cs" />
+    <Compile Include="Renderer\FacebookLoginButtonRenderer.cs" />
+    <Compile Include="Services\FacebookLoginService.cs" />
+    <Compile Include="TokInfoController.cs" />
+    <Compile Include="TokInfoController.designer.cs">
+      <DependentUpon>TokInfoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIPickerViewController.cs" />
+    <Compile Include="UIPickerViewController.designer.cs">
+      <DependentUpon>UIPickerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\GmailLoginViewModel.cs" />
+    <Compile Include="Views\Controls\NoBounceRenderer.cs" />
+    <Compile Include="Views\Group\GroupsPage.xaml.cs">
+      <DependentUpon>GroupsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Set\SetsPage.xaml.cs">
+      <DependentUpon>SetsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Set\AddEditSetPage.xaml.cs">
+      <DependentUpon>AddEditSetPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\WindowManager.cs" />
+    <Compile Include="Views\Controls\TokFloatingButton.cs" />
+    <Compile Include="Views\NotificationController.cs" />
+    <Compile Include="Views\NotificationController.designer.cs">
+      <DependentUpon>NotificationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Play\TokBackPage.xaml.cs">
+      <DependentUpon>TokBackPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Play\TokCardsPage.xaml.cs">
+      <DependentUpon>TokCardsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Play\TokMatchPage.xaml.cs">
+      <DependentUpon>TokMatchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Play\View\XNFlipViewRenderer.cs" />
+    <Compile Include="Views\Play\XNFlipView.cs" />
+    <Compile Include="Views\ProfileController.cs" />
+    <Compile Include="Views\ProfileController.designer.cs">
+      <DependentUpon>ProfileController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileTabViewItem.cs" />
+    <Compile Include="ProfileTabViewItem.designer.cs">
+      <DependentUpon>ProfileTabViewItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RightViewController.cs" />
+    <Compile Include="RightViewController.designer.cs">
+      <DependentUpon>RightViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchController.cs" />
+    <Compile Include="Views\SearchController.designer.cs">
+      <DependentUpon>SearchController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContainerController.cs" />
+    <Compile Include="Views\ContainerController.designer.cs">
+      <DependentUpon>ContainerController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCollectionSource.cs" />
+    <Compile Include="TokTileViewCell.cs" />
+    <Compile Include="Views\HomeController.cs" />
+    <Compile Include="Views\HomeController.designer.cs">
+      <DependentUpon>HomeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginController.cs" />
+    <Compile Include="Views\LoginController.designer.cs">
+      <DependentUpon>LoginController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainTabController.cs" />
+    <Compile Include="Views\MainTabController.designer.cs">
+      <DependentUpon>MainTabController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewModels\PickerViewModel.cs" />
+    <Compile Include="Views\RegistrationController.cs" />
+    <Compile Include="Views\RegistrationController.designer.cs">
+      <DependentUpon>RegistrationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="SceneDelegate.cs" />
+    <Compile Include="Setups\ViewModelLocator.cs" />
+    <Compile Include="ViewModels\LoginPageViewModel.cs" />
+    <BundleResource Include="GoogleService-Info.plist" />
+    <Compile Include="Views\Settings\SettingsNavigationController.cs" />
+    <Compile Include="Views\Settings\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Group\AddEditGroupPage.xaml.cs">
+      <DependentUpon>AddEditGroupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Set\SetsNavigationController.cs" />
+    <Compile Include="Views\Tok\AddEditTokPage.xaml.cs">
+      <DependentUpon>AddEditTokPage.xaml</DependentUpon>
+    </Compile>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\First.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\First.imageset\First.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Second.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Second.imageset\Second.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\First.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\First.imageset\First.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Second.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Second.imageset\Second.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="TokInfoViewController.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Main.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\First.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\First.imageset\First.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Second.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Second.imageset\Second.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FloatingActionButton">
+      <Version>1.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter">
+      <Version>4.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>4.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>4.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.GoogleClient">
+      <Version>1.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="Tokket.Tokkepedia">
+      <Version>0.0.1.74</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Auth">
+      <Version>1.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Build.Download">
+      <Version>0.10.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.0-pre4" />
+    <PackageReference Include="Xamarin.Facebook.iOS">
+      <Version>5.12.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>4.8.0.1451</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Google.iOS.SignIn">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.SideMenu">
+      <Version>1.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <Content Include="Entitlements.plist" />
+    <BundleResource Include="Resources\bg1.png" />
+    <BundleResource Include="Resources\tokkepedia_logo.png" />
+    <BundleResource Include="Resources\tokketlogowwhite.png" />
+    <BundleResource Include="Resources\Flags\ad.jpg" />
+    <BundleResource Include="Resources\Flags\ae.jpg" />
+    <BundleResource Include="Resources\Flags\af.jpg" />
+    <BundleResource Include="Resources\Flags\ag.jpg" />
+    <BundleResource Include="Resources\Flags\ai.jpg" />
+    <BundleResource Include="Resources\Flags\al.jpg" />
+    <BundleResource Include="Resources\Flags\am.jpg" />
+    <BundleResource Include="Resources\Flags\an.jpg" />
+    <BundleResource Include="Resources\Flags\ao.jpg" />
+    <BundleResource Include="Resources\Flags\aq.jpg" />
+    <BundleResource Include="Resources\Flags\ar.jpg" />
+    <BundleResource Include="Resources\Flags\as.jpg" />
+    <BundleResource Include="Resources\Flags\at.jpg" />
+    <BundleResource Include="Resources\Flags\au.jpg" />
+    <BundleResource Include="Resources\Flags\aw.jpg" />
+    <BundleResource Include="Resources\Flags\ax.jpg" />
+    <BundleResource Include="Resources\Flags\az.jpg" />
+    <BundleResource Include="Resources\Flags\ba.jpg" />
+    <BundleResource Include="Resources\Flags\bb.jpg" />
+    <BundleResource Include="Resources\Flags\bd.jpg" />
+    <BundleResource Include="Resources\Flags\be.jpg" />
+    <BundleResource Include="Resources\Flags\bf.jpg" />
+    <BundleResource Include="Resources\Flags\bg.jpg" />
+    <BundleResource Include="Resources\Flags\bh.jpg" />
+    <BundleResource Include="Resources\Flags\bi.jpg" />
+    <BundleResource Include="Resources\Flags\bj.jpg" />
+    <BundleResource Include="Resources\Flags\bl.jpg" />
+    <BundleResource Include="Resources\Flags\bm.jpg" />
+    <BundleResource Include="Resources\Flags\bn.jpg" />
+    <BundleResource Include="Resources\Flags\bo.jpg" />
+    <BundleResource Include="Resources\Flags\bq.jpg" />
+    <BundleResource Include="Resources\Flags\br.jpg" />
+    <BundleResource Include="Resources\Flags\bs.jpg" />
+    <BundleResource Include="Resources\Flags\bt.jpg" />
+    <BundleResource Include="Resources\Flags\bv.jpg" />
+    <BundleResource Include="Resources\Flags\bw.jpg" />
+    <BundleResource Include="Resources\Flags\by.jpg" />
+    <BundleResource Include="Resources\Flags\bz.jpg" />
+    <BundleResource Include="Resources\Flags\ca.jpg" />
+    <BundleResource Include="Resources\Flags\cc.jpg" />
+    <BundleResource Include="Resources\Flags\cd.jpg" />
+    <BundleResource Include="Resources\Flags\cf.jpg" />
+    <BundleResource Include="Resources\Flags\cg.jpg" />
+    <BundleResource Include="Resources\Flags\ch.jpg" />
+    <BundleResource Include="Resources\Flags\ci.jpg" />
+    <BundleResource Include="Resources\Flags\ck.jpg" />
+    <BundleResource Include="Resources\Flags\cl.jpg" />
+    <BundleResource Include="Resources\Flags\cm.jpg" />
+    <BundleResource Include="Resources\Flags\cn.jpg" />
+    <BundleResource Include="Resources\Flags\co.jpg" />
+    <BundleResource Include="Resources\Flags\cr.jpg" />
+    <BundleResource Include="Resources\Flags\cu.jpg" />
+    <BundleResource Include="Resources\Flags\cv.jpg" />
+    <BundleResource Include="Resources\Flags\cw.jpg" />
+    <BundleResource Include="Resources\Flags\cx.jpg" />
+    <BundleResource Include="Resources\Flags\cy.jpg" />
+    <BundleResource Include="Resources\Flags\cz.jpg" />
+    <BundleResource Include="Resources\Flags\de.jpg" />
+    <BundleResource Include="Resources\Flags\dj.jpg" />
+    <BundleResource Include="Resources\Flags\dk.jpg" />
+    <BundleResource Include="Resources\Flags\dm.jpg" />
+    <BundleResource Include="Resources\Flags\do.jpg" />
+    <BundleResource Include="Resources\Flags\dz.jpg" />
+    <BundleResource Include="Resources\Flags\ec.jpg" />
+    <BundleResource Include="Resources\Flags\ee.jpg" />
+    <BundleResource Include="Resources\Flags\eg.jpg" />
+    <BundleResource Include="Resources\Flags\eh.jpg" />
+    <BundleResource Include="Resources\Flags\er.jpg" />
+    <BundleResource Include="Resources\Flags\es.jpg" />
+    <BundleResource Include="Resources\Flags\et.jpg" />
+    <BundleResource Include="Resources\Flags\eu.jpg" />
+    <BundleResource Include="Resources\Flags\fi.jpg" />
+    <BundleResource Include="Resources\Flags\fj.jpg" />
+    <BundleResource Include="Resources\Flags\fk.jpg" />
+    <BundleResource Include="Resources\Flags\fm.jpg" />
+    <BundleResource Include="Resources\Flags\fo.jpg" />
+    <BundleResource Include="Resources\Flags\fr.jpg" />
+    <BundleResource Include="Resources\Flags\ga.jpg" />
+    <BundleResource Include="Resources\Flags\gb-eng.jpg" />
+    <BundleResource Include="Resources\Flags\gb-nir.jpg" />
+    <BundleResource Include="Resources\Flags\gb-sct.jpg" />
+    <BundleResource Include="Resources\Flags\gb-wls.jpg" />
+    <BundleResource Include="Resources\Flags\gb.jpg" />
+    <BundleResource Include="Resources\Flags\gd.jpg" />
+    <BundleResource Include="Resources\Flags\ge.jpg" />
+    <BundleResource Include="Resources\Flags\gf.jpg" />
+    <BundleResource Include="Resources\Flags\gg.jpg" />
+    <BundleResource Include="Resources\Flags\gh.jpg" />
+    <BundleResource Include="Resources\Flags\gi.jpg" />
+    <BundleResource Include="Resources\Flags\gl.jpg" />
+    <BundleResource Include="Resources\Flags\gm.jpg" />
+    <BundleResource Include="Resources\Flags\gn.jpg" />
+    <BundleResource Include="Resources\Flags\gp.jpg" />
+    <BundleResource Include="Resources\Flags\gq.jpg" />
+    <BundleResource Include="Resources\Flags\gr.jpg" />
+    <BundleResource Include="Resources\Flags\gs.jpg" />
+    <BundleResource Include="Resources\Flags\gt.jpg" />
+    <BundleResource Include="Resources\Flags\gu.jpg" />
+    <BundleResource Include="Resources\Flags\gw.jpg" />
+    <BundleResource Include="Resources\Flags\gy.jpg" />
+    <BundleResource Include="Resources\Flags\hk.jpg" />
+    <BundleResource Include="Resources\Flags\hm.jpg" />
+    <BundleResource Include="Resources\Flags\hn.jpg" />
+    <BundleResource Include="Resources\Flags\hr.jpg" />
+    <BundleResource Include="Resources\Flags\ht.jpg" />
+    <BundleResource Include="Resources\Flags\hu.jpg" />
+    <BundleResource Include="Resources\Flags\id.jpg" />
+    <BundleResource Include="Resources\Flags\ie.jpg" />
+    <BundleResource Include="Resources\Flags\il.jpg" />
+    <BundleResource Include="Resources\Flags\im.jpg" />
+    <BundleResource Include="Resources\Flags\in.jpg" />
+    <BundleResource Include="Resources\Flags\io.jpg" />
+    <BundleResource Include="Resources\Flags\iq.jpg" />
+    <BundleResource Include="Resources\Flags\ir.jpg" />
+    <BundleResource Include="Resources\Flags\is.jpg" />
+    <BundleResource Include="Resources\Flags\it.jpg" />
+    <BundleResource Include="Resources\Flags\je.jpg" />
+    <BundleResource Include="Resources\Flags\jm.jpg" />
+    <BundleResource Include="Resources\Flags\jo.jpg" />
+    <BundleResource Include="Resources\Flags\jp.jpg" />
+    <BundleResource Include="Resources\Flags\ke.jpg" />
+    <BundleResource Include="Resources\Flags\kg.jpg" />
+    <BundleResource Include="Resources\Flags\kh.jpg" />
+    <BundleResource Include="Resources\Flags\ki.jpg" />
+    <BundleResource Include="Resources\Flags\km.jpg" />
+    <BundleResource Include="Resources\Flags\kn.jpg" />
+    <BundleResource Include="Resources\Flags\kp.jpg" />
+    <BundleResource Include="Resources\Flags\kr.jpg" />
+    <BundleResource Include="Resources\Flags\kw.jpg" />
+    <BundleResource Include="Resources\Flags\ky.jpg" />
+    <BundleResource Include="Resources\Flags\kz.jpg" />
+    <BundleResource Include="Resources\Flags\la.jpg" />
+    <BundleResource Include="Resources\Flags\lb.jpg" />
+    <BundleResource Include="Resources\Flags\lc.jpg" />
+    <BundleResource Include="Resources\Flags\li.jpg" />
+    <BundleResource Include="Resources\Flags\lk.jpg" />
+    <BundleResource Include="Resources\Flags\lr.jpg" />
+    <BundleResource Include="Resources\Flags\ls.jpg" />
+    <BundleResource Include="Resources\Flags\lt.jpg" />
+    <BundleResource Include="Resources\Flags\lu.jpg" />
+    <BundleResource Include="Resources\Flags\lv.jpg" />
+    <BundleResource Include="Resources\Flags\ly.jpg" />
+    <BundleResource Include="Resources\Flags\ma.jpg" />
+    <BundleResource Include="Resources\Flags\mc.jpg" />
+    <BundleResource Include="Resources\Flags\md.jpg" />
+    <BundleResource Include="Resources\Flags\me.jpg" />
+    <BundleResource Include="Resources\Flags\mf.jpg" />
+    <BundleResource Include="Resources\Flags\mg.jpg" />
+    <BundleResource Include="Resources\Flags\mh.jpg" />
+    <BundleResource Include="Resources\Flags\mk.jpg" />
+    <BundleResource Include="Resources\Flags\ml.jpg" />
+    <BundleResource Include="Resources\Flags\mm.jpg" />
+    <BundleResource Include="Resources\Flags\mn.jpg" />
+    <BundleResource Include="Resources\Flags\mo.jpg" />
+    <BundleResource Include="Resources\Flags\mp.jpg" />
+    <BundleResource Include="Resources\Flags\mq.jpg" />
+    <BundleResource Include="Resources\Flags\mr.jpg" />
+    <BundleResource Include="Resources\Flags\ms.jpg" />
+    <BundleResource Include="Resources\Flags\mt.jpg" />
+    <BundleResource Include="Resources\Flags\mu.jpg" />
+    <BundleResource Include="Resources\Flags\mv.jpg" />
+    <BundleResource Include="Resources\Flags\mw.jpg" />
+    <BundleResource Include="Resources\Flags\mx.jpg" />
+    <BundleResource Include="Resources\Flags\my.jpg" />
+    <BundleResource Include="Resources\Flags\mz.jpg" />
+    <BundleResource Include="Resources\Flags\na.jpg" />
+    <BundleResource Include="Resources\Flags\nc.jpg" />
+    <BundleResource Include="Resources\Flags\ne.jpg" />
+    <BundleResource Include="Resources\Flags\nf.jpg" />
+    <BundleResource Include="Resources\Flags\ng.jpg" />
+    <BundleResource Include="Resources\Flags\ni.jpg" />
+    <BundleResource Include="Resources\Flags\nl.jpg" />
+    <BundleResource Include="Resources\Flags\no.jpg" />
+    <BundleResource Include="Resources\Flags\np.jpg" />
+    <BundleResource Include="Resources\Flags\nr.jpg" />
+    <BundleResource Include="Resources\Flags\nu.jpg" />
+    <BundleResource Include="Resources\Flags\nz.jpg" />
+    <BundleResource Include="Resources\Flags\om.jpg" />
+    <BundleResource Include="Resources\Flags\pa.jpg" />
+    <BundleResource Include="Resources\Flags\pe.jpg" />
+    <BundleResource Include="Resources\Flags\pf.jpg" />
+    <BundleResource Include="Resources\Flags\pg.jpg" />
+    <BundleResource Include="Resources\Flags\ph.jpg" />
+    <BundleResource Include="Resources\Flags\pk.jpg" />
+    <BundleResource Include="Resources\Flags\pl.jpg" />
+    <BundleResource Include="Resources\Flags\pm.jpg" />
+    <BundleResource Include="Resources\Flags\pn.jpg" />
+    <BundleResource Include="Resources\Flags\pr.jpg" />
+    <BundleResource Include="Resources\Flags\ps.jpg" />
+    <BundleResource Include="Resources\Flags\pt.jpg" />
+    <BundleResource Include="Resources\Flags\pw.jpg" />
+    <BundleResource Include="Resources\Flags\py.jpg" />
+    <BundleResource Include="Resources\Flags\qa.jpg" />
+    <BundleResource Include="Resources\Flags\re.jpg" />
+    <BundleResource Include="Resources\Flags\ro.jpg" />
+    <BundleResource Include="Resources\Flags\rs.jpg" />
+    <BundleResource Include="Resources\Flags\ru.jpg" />
+    <BundleResource Include="Resources\Flags\rw.jpg" />
+    <BundleResource Include="Resources\Flags\sa.jpg" />
+    <BundleResource Include="Resources\Flags\sb.jpg" />
+    <BundleResource Include="Resources\Flags\sc.jpg" />
+    <BundleResource Include="Resources\Flags\sd.jpg" />
+    <BundleResource Include="Resources\Flags\se.jpg" />
+    <BundleResource Include="Resources\Flags\sg.jpg" />
+    <BundleResource Include="Resources\Flags\sh.jpg" />
+    <BundleResource Include="Resources\Flags\si.jpg" />
+    <BundleResource Include="Resources\Flags\sj.jpg" />
+    <BundleResource Include="Resources\Flags\sk.jpg" />
+    <BundleResource Include="Resources\Flags\sl.jpg" />
+    <BundleResource Include="Resources\Flags\sm.jpg" />
+    <BundleResource Include="Resources\Flags\sn.jpg" />
+    <BundleResource Include="Resources\Flags\so.jpg" />
+    <BundleResource Include="Resources\Flags\sr.jpg" />
+    <BundleResource Include="Resources\Flags\ss.jpg" />
+    <BundleResource Include="Resources\Flags\st.jpg" />
+    <BundleResource Include="Resources\Flags\sv.jpg" />
+    <BundleResource Include="Resources\Flags\sx.jpg" />
+    <BundleResource Include="Resources\Flags\sy.jpg" />
+    <BundleResource Include="Resources\Flags\sz.jpg" />
+    <BundleResource Include="Resources\Flags\tc.jpg" />
+    <BundleResource Include="Resources\Flags\td.jpg" />
+    <BundleResource Include="Resources\Flags\tf.jpg" />
+    <BundleResource Include="Resources\Flags\tg.jpg" />
+    <BundleResource Include="Resources\Flags\th.jpg" />
+    <BundleResource Include="Resources\Flags\tj.jpg" />
+    <BundleResource Include="Resources\Flags\tk.jpg" />
+    <BundleResource Include="Resources\Flags\tl.jpg" />
+    <BundleResource Include="Resources\Flags\tm.jpg" />
+    <BundleResource Include="Resources\Flags\tn.jpg" />
+    <BundleResource Include="Resources\Flags\to.jpg" />
+    <BundleResource Include="Resources\Flags\tr.jpg" />
+    <BundleResource Include="Resources\Flags\tt.jpg" />
+    <BundleResource Include="Resources\Flags\tv.jpg" />
+    <BundleResource Include="Resources\Flags\tw.jpg" />
+    <BundleResource Include="Resources\Flags\tz.jpg" />
+    <BundleResource Include="Resources\Flags\ua.jpg" />
+    <BundleResource Include="Resources\Flags\ug.jpg" />
+    <BundleResource Include="Resources\Flags\um.jpg" />
+    <BundleResource Include="Resources\Flags\us.jpg" />
+    <BundleResource Include="Resources\Flags\uy.jpg" />
+    <BundleResource Include="Resources\Flags\uz.jpg" />
+    <BundleResource Include="Resources\Flags\va.jpg" />
+    <BundleResource Include="Resources\Flags\vc.jpg" />
+    <BundleResource Include="Resources\Flags\ve.jpg" />
+    <BundleResource Include="Resources\Flags\vg.jpg" />
+    <BundleResource Include="Resources\Flags\vi.jpg" />
+    <BundleResource Include="Resources\Flags\vn.jpg" />
+    <BundleResource Include="Resources\Flags\vu.jpg" />
+    <BundleResource Include="Resources\Flags\wf.jpg" />
+    <BundleResource Include="Resources\Flags\ws.jpg" />
+    <BundleResource Include="Resources\Flags\xk.jpg" />
+    <BundleResource Include="Resources\Flags\ye.jpg" />
+    <BundleResource Include="Resources\Flags\yt.jpg" />
+    <BundleResource Include="Resources\Flags\za.jpg" />
+    <BundleResource Include="Resources\Flags\zm.jpg" />
+    <BundleResource Include="Resources\Flags\zw.jpg" />
+    <BundleResource Include="Resources\hamburger-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tokkepedia.Shared\Tokkepedia.Shared.csproj">
+      <Project>{aa3790d7-a72c-4d7f-a113-e2dfc76961c6}</Project>
+      <Name>Tokkepedia.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Settings\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Play\TokCardsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Play\TokMatchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Play\TokBackPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Tok\AddEditTokPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Set\AddEditSetPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Group\AddEditGroupPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Set\SetsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Group\GroupsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XamarinHotReloadWrongLinkerErrorInfoBarTokkepediaiOSHideInfoBar="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

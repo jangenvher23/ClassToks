@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokkepedia.iOS.Views.TokCardsPage"
+             xmlns:flip="clr-namespace:Tokkepedia.iOS"
+             Title="Tok Cards">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                0, 20, 0, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Grid>
+
+        <Label
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Text="Tok Cards" />
+
+        <flip:XNFlipView x:Name="XNFlipViewControl1" Grid.Row="1">
+
+            <flip:XNFlipView.FrontView>
+                <Frame
+                    Margin="10"
+                    Padding="0"
+                    BackgroundColor="#FFFFFF"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    OutlineColor="Black">
+                    <Grid RowSpacing="5" VerticalOptions="CenterAndExpand">
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="this is front view"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            Grid.Row="1"
+                            Aspect="AspectFit"
+                            HeightRequest="100"
+                            Source="bg1.png"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="frontViewTimeLabel"
+                            Grid.Row="2"
+                            Margin="20,0,20,0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            TextColor="White" />
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="150" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </Frame>
+            </flip:XNFlipView.FrontView>
+
+            <flip:XNFlipView.BackView>
+                <Frame
+                    Margin="10"
+                    Padding="0"
+                    BackgroundColor="#FFFFFF"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    OutlineColor="Black">
+                    <Grid RowSpacing="5" VerticalOptions="CenterAndExpand">
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="this is back view"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            Grid.Row="1"
+                            Aspect="AspectFit"
+                            HeightRequest="100"
+                            Source="bg1.png"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="backViewTimeLabel"
+                            Grid.Row="2"
+                            Margin="20,0,20,0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            TextColor="White" />
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="150" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </Frame>
+            </flip:XNFlipView.BackView>
+
+            <flip:XNFlipView.GestureRecognizers>
+                <TapGestureRecognizer
+                Tapped="flipItButton_OnClicked"
+                NumberOfTapsRequired="1" />
+            </flip:XNFlipView.GestureRecognizers>
+            
+        </flip:XNFlipView>
+
+        <Button
+            x:Name="flipItButton"
+            Grid.Row="3"
+            Clicked="flipItButton_OnClicked"
+            Text="Flip it!" />
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="400" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+    </Grid>
+
+</ContentPage>

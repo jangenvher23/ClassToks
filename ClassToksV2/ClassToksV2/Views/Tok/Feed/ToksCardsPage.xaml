@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassToksV2.Views.ToksCardsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:ClassToksV2.ViewModels"  
+             xmlns:model="clr-namespace:ClassToksV2.Models" 
+             xmlns:shared="clr-namespace:Tokkepedia.Shared.Models;assembly=Tokkepedia.Shared" xmlns:classtoks="clr-namespace:ClassToksV2" xmlns:views="clr-namespace:ClassToksV2.Views.Tok.View"
+             x:Name="toksPage"
+             Visual="Material">
+
+    <Shell.TitleView>
+        <Label Text="The social and playable knowledge sharing app" TextColor="White" LineBreakMode="WordWrap" FontSize="Small"/>
+    </Shell.TitleView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddItemCommand}" Text="FILTER"/>
+        <ToolbarItem Command="{Binding AddTokCommand}" Text="Add Tok" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="UserDisplayNameStyle" TargetType="Label">
+                <Setter Property="Label.BackgroundColor" Value="Transparent" />
+                <Setter Property="Label.TextColor" Value="White" />
+                <Setter Property="Label.FontAttributes" Value="Bold" />
+                <Setter Property="Label.FontSize" Value="16" />
+                <Setter Property="Label.LineBreakMode" Value="TailTruncation" />
+            </Style>
+            <Style x:Key="PrimaryTextStyle" TargetType="Label">
+                <Setter Property="Label.BackgroundColor" Value="Transparent" />
+                <Setter Property="Label.TextColor" Value="White" />
+                <Setter Property="Label.FontAttributes" Value="Bold" />
+                <Setter Property="Label.FontSize" Value="16" />
+                <Setter Property="Label.LineBreakMode" Value="TailTruncation" />
+            </Style>
+            <Style x:Key="CategoryStyle" TargetType="Label">
+                <Setter Property="Label.BackgroundColor" Value="Transparent" />
+                <Setter Property="Label.TextColor" Value="White" />
+                <Setter Property="Label.FontSize" Value="14" />
+                <Setter Property="Label.LineBreakMode" Value="TailTruncation" />
+            </Style>
+
+            <DataTemplate x:Key="TokTilesTemplate">
+                <views:TokTilesFeed/>
+            </DataTemplate>
+            <DataTemplate x:Key="TokCardsTemplate">
+                <views:TokCardsFeed/>
+            </DataTemplate>
+            <model:TokFeedTemplateSelector x:Key="FeedSelector"
+                                             TokTile="{StaticResource TokTilesTemplate}"
+                                             TokCard="{StaticResource TokCardsTemplate}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+
+    <RefreshView 
+                     x:DataType="local:ToksViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <RefreshView.Content>
+            <CollectionView x:Name="ItemsListView"
+                    ItemsSource="{Binding Items}"
+                    SelectionMode="None" Margin="1">
+                <CollectionView.ItemsLayout>
+
+                    <GridItemsLayout Orientation="Vertical"
+                            Span="{OnIdiom Phone=1, Tablet=2}"
+                            VerticalItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                            EndPoint="1,0">
+                        <GradientStop Color="LightGray"
+                        Offset="0.1"/>
+                        <GradientStop Color="GhostWhite"
+                        Offset="1.0"/>
+                    </LinearGradientBrush>
+                </CollectionView.Background>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <views:TokCardView BindingContext="{Binding .}"></views:TokCardView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView.Content>
+    </RefreshView>
+</ContentPage>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:ClassToksV2.Views"
+             x:Class="ClassToksV2.Views.AddEditGroupPage"
+             Title=""
+             Visual="Material">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior>
+            <BackButtonBehavior.TextOverride>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="iOS" Value=" " />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </BackButtonBehavior.TextOverride>
+        </BackButtonBehavior>
+    </Shell.BackButtonBehavior>
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                20, 0, 20, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddEditGroupCommand}" Text="Add Group" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid 
+        ColumnDefinitions="*" 
+        RowDefinitions="*">
+        <ScrollView Grid.Row="0">
+            <StackLayout Spacing="10" Padding="0" Margin="0,15">
+
+                <Label x:Name="lblName" FontSize="20" HorizontalTextAlignment="Start" Text="Group Name" />
+                <Entry x:Name="txtName" IsVisible="True"  Placeholder="Set Name" Text="{Binding Item.Name, Mode=TwoWay}" HeightRequest="50"/>
+                <Label x:Name="lblNameCounter" FontSize="10" HorizontalTextAlignment="End" Text="0 / 200" TextColor="LightGray"/>
+
+                <Label x:Name="lblDescription" FontSize="20" HorizontalTextAlignment="Start" Text="Description" />
+                <Entry x:Name="txtDescription" IsVisible="True"  Placeholder="Description" Text="{Binding Item.Description}" HeightRequest="50"/>
+                <Label x:Name="lblDescriptionCounter" FontSize="10" HorizontalTextAlignment="End" Text="0 / 5000" TextColor="LightGray"/>
+
+                <Label x:Name="lblSchool" FontSize="20" HorizontalTextAlignment="Start" Text="School" />
+                <Entry x:Name="txtSchool" IsVisible="True"  Placeholder="School" Text="{Binding Item.School}" HeightRequest="50"/>
+                <Label x:Name="lblSchoolCounter" FontSize="10" HorizontalTextAlignment="End" Text="0 / 100" TextColor="LightGray"/>
+
+                <!--<BoxView HeightRequest="3" BackgroundColor="Black"/>
+
+                <Label x:Name="lblColor"
+            FontSize="20"
+            HorizontalTextAlignment="Start"
+            Text="Color" />
+                <Button x:Name="btnColor" Text="Select Color" TextTransform="None" FontAttributes="Bold" BackgroundColor="Black" TextColor="White"></Button>-->
+
+            </StackLayout>
+        </ScrollView>
+        <views:WaitingView Grid.Row="0" x:Name="waitingView" InputTransparent="True"
+            IsVisible="{Binding IsLoaderVisible, Mode=TwoWay}" Margin="{OnIdiom Phone='400,400', Tablet='100,200'}"></views:WaitingView>
+    </Grid>
+
+
+
+
+</ContentPage>

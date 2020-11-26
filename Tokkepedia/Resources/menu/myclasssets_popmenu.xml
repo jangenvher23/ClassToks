@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:id="@+id/itemAddClassSetToGroup"
+        android:title="View Class Toks" />
+  <item android:id="@+id/itemReplicate"
+        android:title="Replicate" />
+  <item android:id="@+id/itemEdit"
+        android:title="Edit" />
+  <item android:id="@+id/itemDelete"
+        android:title="Delete" />
+  <item android:id="@+id/itemPlayTokCards"
+      android:title="Play Tok Cards" />
+  <item android:id="@+id/itemPlayTokChoice"
+        android:title="Play Tok Choice" />
+  <item android:id="@+id/itemTokMatch"
+       android:title="Play Tok Match" />
+</menu>

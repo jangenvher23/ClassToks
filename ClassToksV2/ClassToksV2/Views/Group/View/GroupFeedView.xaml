@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassToksV2.Views.GroupFeedView"
+             xmlns:model="clr-namespace:ClassToksV2.Models" 
+             xmlns:local="clr-namespace:ClassToksV2.ViewModels">
+  <ContentView.Content>
+        <!-- Outside Fram = Border size -->
+        <Frame
+            x:Name="frameTile"
+            x:DataType="model:ClassGroupXF"
+                Padding="0"
+                CornerRadius="12"
+                HasShadow="False"
+                HeightRequest="250"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="LightGray">
+            
+            <Frame
+                Margin="2" 
+                Padding="5"
+                BackgroundColor="White"
+                CornerRadius="12"
+                HasShadow="False">
+
+            <!--<Frame.Background>
+                    <LinearGradientBrush StartPoint="0,0"
+                            EndPoint="1,0">
+                        <GradientStop Color="DarkOrange"
+                        Offset="0.1"/>
+                        <GradientStop Color="DarkGoldenrod"
+                        Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Frame.Background>-->
+            <!--<StackLayout x:Name="stkTile" Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill">-->
+            
+            <Grid x:Name="stkTile" RowDefinitions="30*,70*" ColumnDefinitions="*" HorizontalOptions="Fill" VerticalOptions="Fill">
+                
+
+                <StackLayout x:Name="stkRowMiddle" Grid.Row="1" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Start">
+
+                        <Label Text="{Binding Name}" HorizontalTextAlignment="Center"
+                                    FontSize="15" FontAttributes="Bold" MaxLines="1" LineBreakMode="TailTruncation"/>
+
+                        <Image
+                        HeightRequest="80" WidthRequest="220"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Aspect="AspectFill"
+                        IsVisible="{Binding HasImage}">
+                            <Image.Source>
+                                <UriImageSource Uri="{Binding Image}" 
+			                                CacheValidity="14" 
+			                                CachingEnabled="true"/>
+                            </Image.Source>
+                        </Image>
+                </StackLayout>
+
+                    <Grid x:Name="stkRowBottom" Grid.Row="2"
+                                ColumnDefinitions="3*,7*" 
+                                RowDefinitions="*"
+                                      VerticalOptions="Center">
+                        <Grid  Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Start"
+                                ColumnDefinitions="*" 
+                                RowDefinitions="*">
+                            <!-- Profile Circle Image -->
+                            <Ellipse
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="40"
+                                        HeightRequest="40"
+                                        Stroke="#542a7d"
+                                        StrokeThickness="2"
+                                        Fill="White"/>
+                            <Image
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            Aspect="AspectFill">
+                                <Image.Clip>
+                                    <EllipseGeometry
+                                                Center="20,20"
+                                                RadiusX="20"
+                                                RadiusY="20"/>
+                                </Image.Clip>
+                                <Image.Source>
+                                    <UriImageSource Uri="{Binding UserPhoto}" 
+			                                CacheValidity="14" 
+			                                CachingEnabled="true"/>
+                                </Image.Source>
+                            </Image>
+                        </Grid>
+
+                        <!--Column 1: User Name-->
+                        <StackLayout Grid.Row="0" Grid.Column="1"  Orientation="Vertical"  Spacing="1" Padding="0" VerticalOptions="Start" HorizontalOptions="Start">
+                            <Label Text="{Binding UserDisplayName}"
+                               FontAttributes="Bold"
+                               TextColor="Black"
+                               FontSize="12"
+                               LineBreakMode="TailTruncation"
+                               HorizontalTextAlignment="Center"
+                               MaxLines="1"/>
+                            <Label Text="Title Goes Here"
+                               TextColor="Black"
+                               FontSize="8"
+                               LineBreakMode="TailTruncation"
+                               HorizontalTextAlignment="Center"
+                               MaxLines="1"/>
+                        </StackLayout>
+                    </Grid>
+
+                    <Grid.GestureRecognizers>
+                    <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:GroupsViewModel}}, Path=ItemTapped}"		
+                                    CommandParameter="{Binding .}">
+                    </TapGestureRecognizer>
+                </Grid.GestureRecognizers>
+            </Grid>
+            </Frame>
+
+        </Frame>
+    </ContentView.Content>
+</ContentView>

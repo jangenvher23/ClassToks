@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassToksV2.Views.GroupsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:ClassToksV2.ViewModels"  
+             xmlns:model="clr-namespace:ClassToksV2.Models" 
+             xmlns:shared="clr-namespace:Tokkepedia.Shared.Models;assembly=Tokkepedia.Shared" xmlns:views="clr-namespace:ClassToksV2.Views"
+             x:Name="groupsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddItemCommand}"  Text="Add"/>
+    </ContentPage.ToolbarItems>
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+    <RefreshView x:DataType="local:GroupsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                            Span="{OnIdiom Phone=2, Tablet=2}"
+                            HorizontalItemSpacing="1"
+                            VerticalItemSpacing="1"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <views:GroupFeedView BindingContext="{Binding .}" HeightRequest="250"></views:GroupFeedView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.Footer>
+                <Grid BackgroundColor="Transparent" HeightRequest="{Binding FooterHeight}" InputTransparent="True">
+                    <ActivityIndicator x:Name="spinItemsListView" IsRunning="True" Scale="{OnIdiom Phone=1.5, Tablet=2}" HeightRequest="{OnIdiom Phone=100, Tablet=50}"></ActivityIndicator>
+                </Grid>
+            </CollectionView.Footer>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>
