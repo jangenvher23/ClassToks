@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia\\Tokkepedia.csproj": {}
+    "/Users/mac/Desktop/ClassToks/Tokkepedia/Tokkepedia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
+    "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
+        "projectUniqueName": "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj",
         "projectName": "Tokkepedia.Shared",
-        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
-        "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\obj\\",
+        "projectPath": "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj",
+        "packagesPath": "/Users/mac/.nuget/packages/",
+        "outputPath": "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
-          "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/mac/Desktop/ClassToks/NuGet.Config",
+          "/Users/mac/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -98,28 +96,23 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia\\Tokkepedia.csproj": {
+    "/Users/mac/Desktop/ClassToks/Tokkepedia/Tokkepedia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia\\Tokkepedia.csproj",
+        "projectUniqueName": "/Users/mac/Desktop/ClassToks/Tokkepedia/Tokkepedia.csproj",
         "projectName": "Tokkepedia",
-        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia\\Tokkepedia.csproj",
-        "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia\\obj\\",
+        "projectPath": "/Users/mac/Desktop/ClassToks/Tokkepedia/Tokkepedia.csproj",
+        "packagesPath": "/Users/mac/.nuget/packages/",
+        "outputPath": "/Users/mac/Desktop/ClassToks/Tokkepedia/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
-          "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/mac/Desktop/ClassToks/NuGet.Config",
+          "/Users/mac/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "monoandroid10.0"
@@ -131,8 +124,8 @@
         "frameworks": {
           "monoandroid10.0": {
             "projectReferences": {
-              "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
-                "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj"
+              "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj": {
+                "projectPath": "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj"
               }
             }
           }

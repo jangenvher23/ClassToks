@@ -199,27 +199,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tokke\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/mac/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.UITest\\Tokkepedia.UITest.csproj",
+      "projectUniqueName": "/Users/mac/Desktop/ClassToks/Tokkepedia.UITest/Tokkepedia.UITest.csproj",
       "projectName": "Tokkepedia.UITest",
-      "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.UITest\\Tokkepedia.UITest.csproj",
-      "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.UITest\\obj\\",
+      "projectPath": "/Users/mac/Desktop/ClassToks/Tokkepedia.UITest/Tokkepedia.UITest.csproj",
+      "packagesPath": "/Users/mac/.nuget/packages/",
+      "outputPath": "/Users/mac/Desktop/ClassToks/Tokkepedia.UITest/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
-        "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/mac/Desktop/ClassToks/NuGet.Config",
+        "/Users/mac/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net461"

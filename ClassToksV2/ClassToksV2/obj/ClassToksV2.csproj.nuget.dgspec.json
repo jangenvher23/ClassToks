@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj": {}
+    "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2/ClassToksV2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj": {
+    "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2/ClassToksV2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
+        "projectUniqueName": "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2/ClassToksV2.csproj",
         "projectName": "ClassToksV2",
-        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
-        "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\obj\\",
+        "projectPath": "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2/ClassToksV2.csproj",
+        "packagesPath": "/Users/mac/.nuget/packages/",
+        "outputPath": "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
-          "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/mac/Desktop/ClassToks/NuGet.Config",
+          "/Users/mac/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -33,8 +31,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
-                "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj"
+              "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj": {
+                "projectPath": "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj"
               }
             }
           }
@@ -78,27 +76,25 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
+    "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
+        "projectUniqueName": "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj",
         "projectName": "Tokkepedia.Shared",
-        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
-        "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\obj\\",
+        "projectPath": "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj",
+        "packagesPath": "/Users/mac/.nuget/packages/",
+        "outputPath": "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
-          "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/mac/Desktop/ClassToks/NuGet.Config",
+          "/Users/mac/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -176,7 +172,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

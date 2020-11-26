@@ -1476,13 +1476,11 @@
         "lib/wpa81/GalaSoft.MvvmLight.pdb",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.XML",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.dll",
-        "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.dll.mdb",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.pdb",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Platform.XML",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Platform.dll",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.XML",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.dll",
-        "lib/xamarin.ios10/GalaSoft.MvvmLight.dll.mdb",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.pdb",
         "mvvmlightlibs.5.4.1.1.nupkg.sha512",
         "mvvmlightlibs.nuspec"
@@ -1698,7 +1696,6 @@
         "lib/Xamarin.Mac20/Plugin.Settings.dll",
         "lib/Xamarin.Mac20/Plugin.Settings.pdb",
         "lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll",
-        "lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll.mdb",
         "lib/Xamarin.iOS10/Plugin.Settings.Abstractions.pdb",
         "lib/Xamarin.iOS10/Plugin.Settings.Abstractions.xml",
         "lib/Xamarin.iOS10/Plugin.Settings.dll",
@@ -2051,27 +2048,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tokke\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/mac/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.iOS\\ClassToksV2.iOS.csproj",
+      "projectUniqueName": "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2.iOS/ClassToksV2.iOS.csproj",
       "projectName": "ClassToksV2.iOS",
-      "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.iOS\\ClassToksV2.iOS.csproj",
-      "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.iOS\\obj\\",
+      "projectPath": "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2.iOS/ClassToksV2.iOS.csproj",
+      "packagesPath": "/Users/mac/.nuget/packages/",
+      "outputPath": "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
-        "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/mac/Desktop/ClassToks/NuGet.Config",
+        "/Users/mac/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -2083,8 +2074,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj": {
-              "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj"
+            "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2/ClassToksV2.csproj": {
+              "projectPath": "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2/ClassToksV2.csproj"
             }
           }
         }
@@ -2125,7 +2116,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Essentials from 1.6.0-pre4 to 1.5.3.2. Reference the package directly from the project to select a different version. \r\n ClassToksV2.iOS -> ClassToksV2 -> Xamarin.Essentials (>= 1.6.0-pre4) \r\n ClassToksV2.iOS -> Xamarin.Essentials (>= 1.5.3.2)",
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.6.0-pre4 to 1.5.3.2. Reference the package directly from the project to select a different version. \n ClassToksV2.iOS -> ClassToksV2 -> Xamarin.Essentials (>= 1.6.0-pre4) \n ClassToksV2.iOS -> Xamarin.Essentials (>= 1.5.3.2)",
       "libraryId": "Xamarin.Essentials",
       "targetGraphs": [
         "Xamarin.iOS,Version=v1.0",

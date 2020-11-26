@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -93,7 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassToksV2\ClassToksV2.csproj">
-      <Project>{3FF2C5FD-575F-4AB0-9C69-977720F89B3C}</Project>
+      <Project>{EF1A70D1-ACD1-46C8-9F2A-D7D1FD750345}</Project>
       <Name>ClassToksV2</Name>
     </ProjectReference>
   </ItemGroup>

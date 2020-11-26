@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8jLg9+dxkcP/n9iVlbhUvfqusjW9Juqfxi+F5R/+P5b//BluHb0t2lCOzOKdn1FF/EEuiO9ge8dhOxqdPEf28g==",
+  "dgSpecHash": "n7tzjZejX9gW3lZFKwVi8ipEW93Ms/WHAPP8Htr7W0Pfbs0AyDsFA3aED8HvXf6JNlnhcXhrDoIkBCzLtmpYHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.UITest\\Tokkepedia.UITest.csproj",
+  "projectFilePath": "/Users/mac/Desktop/ClassToks/Tokkepedia.UITest/Tokkepedia.UITest.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\tokke\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\nunit3testadapter\\3.13.0\\nunit3testadapter.3.13.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.uitest\\3.0.5\\xamarin.uitest.3.0.5.nupkg.sha512"
+    "/Users/mac/.nuget/packages/nunit/3.12.0/nunit.3.12.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/nunit3testadapter/3.13.0/nunit3testadapter.3.13.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/xamarin.uitest/3.0.5/xamarin.uitest.3.0.5.nupkg.sha512"
   ],
   "logs": []
 }

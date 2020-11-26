@@ -1186,13 +1186,11 @@
         "lib/wpa81/GalaSoft.MvvmLight.pdb",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.XML",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.dll",
-        "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.dll.mdb",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.pdb",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Platform.XML",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Platform.dll",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.XML",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.dll",
-        "lib/xamarin.ios10/GalaSoft.MvvmLight.dll.mdb",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.pdb",
         "mvvmlightlibs.5.4.1.1.nupkg.sha512",
         "mvvmlightlibs.nuspec"
@@ -1405,7 +1403,6 @@
       "path": "runtime.native.system/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -1419,7 +1416,6 @@
       "path": "runtime.native.system.net.http/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -1433,7 +1429,6 @@
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -1641,7 +1636,6 @@
       "path": "system.collections.concurrent/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1866,7 +1860,6 @@
       "path": "system.diagnostics.diagnosticsource/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net46/System.Diagnostics.DiagnosticSource.dll",
@@ -1887,7 +1880,6 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2045,7 +2037,6 @@
       "path": "system.globalization.calendars/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2083,7 +2074,6 @@
       "path": "system.globalization.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2205,7 +2195,6 @@
       "path": "system.io.filesystem/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2243,7 +2232,6 @@
       "path": "system.io.filesystem.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2396,7 +2384,6 @@
       "path": "system.net.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2603,7 +2590,6 @@
       "path": "system.reflection.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2890,7 +2876,6 @@
       "path": "system.runtime.handles/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2928,7 +2913,6 @@
       "path": "system.runtime.interopservices/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3078,7 +3062,6 @@
       "path": "system.security.cryptography.algorithms/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3147,7 +3130,6 @@
       "path": "system.security.cryptography.csp/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3179,7 +3161,6 @@
       "path": "system.security.cryptography.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3220,7 +3201,6 @@
       "path": "system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
@@ -3236,7 +3216,6 @@
       "path": "system.security.cryptography.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3265,7 +3244,6 @@
       "path": "system.security.cryptography.x509certificates/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3571,7 +3549,6 @@
         "lib/Xamarin.Mac20/Plugin.Settings.dll",
         "lib/Xamarin.Mac20/Plugin.Settings.pdb",
         "lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll",
-        "lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll.mdb",
         "lib/Xamarin.iOS10/Plugin.Settings.Abstractions.pdb",
         "lib/Xamarin.iOS10/Plugin.Settings.Abstractions.xml",
         "lib/Xamarin.iOS10/Plugin.Settings.dll",
@@ -3910,26 +3887,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tokke\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/mac/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
+      "projectUniqueName": "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2/ClassToksV2.csproj",
       "projectName": "ClassToksV2",
-      "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
-      "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\obj\\",
+      "projectPath": "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2/ClassToksV2.csproj",
+      "packagesPath": "/Users/mac/.nuget/packages/",
+      "outputPath": "/Users/mac/Desktop/ClassToks/ClassToksV2/ClassToksV2/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
-        "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/mac/Desktop/ClassToks/NuGet.Config",
+        "/Users/mac/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -3942,8 +3917,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
-              "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj"
+            "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj": {
+              "projectPath": "/Users/mac/Desktop/ClassToks/Tokkepedia.Shared/Tokkepedia.Shared.csproj"
             }
           }
         }
@@ -3987,7 +3962,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
       }
     }
   },
