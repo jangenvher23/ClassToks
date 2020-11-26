@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9o9Xva7nr7AwhlDDXpIufl3G9iGtTwLwaXRgJguI8R9R8zpz+eMd0BjjECVqUvtjLyUBgwtVOvSN2WgS85dOvg==",
+  "dgSpecHash": "i3X1g2rA4CptHQ3U1BEA0amdY2ggH8X8ArbgWgBXMbaQ/PTdcH2bcHZHaRxtWQS4eO8DakYQHJhDju9DSFi3yA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia\\Tokkepedia.csproj",
+  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia\\Tokkepedia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tokke\\.nuget\\packages\\commonservicelocator\\2.0.5\\commonservicelocator.2.0.5.nupkg.sha512",
     "C:\\Users\\tokke\\.nuget\\packages\\flexboxlayoutxamarinbindingandroid\\1.0.2\\flexboxlayoutxamarinbindingandroid.1.0.2.nupkg.sha512",

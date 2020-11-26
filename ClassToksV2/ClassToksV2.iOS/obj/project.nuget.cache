@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1LlX4m+vvtHM1MmAIkoZMm/kAn+s4nGERcaCYUfo8BpituU3rnSwt9pQQaXuJ9Z5aiI78gyRX7nqB7CLYAx1ew==",
+  "dgSpecHash": "hbgmqeTqDMwWu0C/fBXm5MjMGTIfV1xtf3G3YL/yICWAkQew3RJ61tHy6gFg0/rdijcMlCbeXkFwzUTwoXIFmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2.iOS\\ClassToksV2.iOS.csproj",
+  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.iOS\\ClassToksV2.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tokke\\.nuget\\packages\\commonservicelocator\\2.0.5\\commonservicelocator.2.0.5.nupkg.sha512",
     "C:\\Users\\tokke\\.nuget\\packages\\microsoft.appcenter\\4.0.0\\microsoft.appcenter.4.0.0.nupkg.sha512",

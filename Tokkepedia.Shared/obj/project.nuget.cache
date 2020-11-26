@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ikJtn1oOoh/m4SkM+EhvRL9Wzs3y4qhDHwmb8/Hr0qAafQgsMxzORe0wap1m86ckAqRXvyjApmzQOYWXHk48Ug==",
+  "dgSpecHash": "cV26OS7rsZ87uR3k94mxb6fj8PyfxM0BatdEpIDrSlry9VhAlJZxu+dVQ8Tg02Dx83KRwqz/K3t6G9wmXrOpZg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
+  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tokke\\.nuget\\packages\\commonservicelocator\\2.0.5\\commonservicelocator.2.0.5.nupkg.sha512",
     "C:\\Users\\tokke\\.nuget\\packages\\microsoft.appcenter\\4.0.0\\microsoft.appcenter.4.0.0.nupkg.sha512",

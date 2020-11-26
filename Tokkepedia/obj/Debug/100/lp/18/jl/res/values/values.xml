@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="shimmer_color">#a2878787</color>
+    <declare-styleable name="ShimmerLayout"><attr format="color|reference" name="shimmer_color"/><attr format="integer|reference" name="shimmer_animation_duration"/></declare-styleable>
+    <string name="app_name">ShimmerLayout</string>
+</resources>

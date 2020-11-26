@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rTFEAmxIrFr6qWvFm5bXRq0jt50rGil2TeIkJNkBxe9H8Un2ViflYWuq/deiohTNuINViPA5hZKwZeqqAdi9Rg==",
+  "dgSpecHash": "QoEbpg5BKQx0Ixs+yTitXrCadVYHej7FzTCd2LIPLXZPuvvhXLe8eY1VoAi8ErhgTJN72D3EnrAXHu55QR1K+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia.iOS\\Tokkepedia.iOS.csproj",
+  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.iOS\\Tokkepedia.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tokke\\.nuget\\packages\\commonservicelocator\\2.0.5\\commonservicelocator.2.0.5.nupkg.sha512",
     "C:\\Users\\tokke\\.nuget\\packages\\floatingactionbutton\\1.0.3\\floatingactionbutton.1.0.3.nupkg.sha512",

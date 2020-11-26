@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ls7lu2fFyi0tecMbuV6Ts2gkViSOTcUR8LMEVqFcAK5tQu3p6xT0PoL+QkI6Pona85nuRXimIg6zR7JvBrpsJQ==",
+  "dgSpecHash": "rXfVGvw8mTzcqXSt1OFZNRL7ZXBxu3+nqso8oMnwHfCX72AfqfESvWqs3JCC2048SY0jecx/vQ5PdpfdvEC/lA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj",
+  "projectFilePath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tokke\\.nuget\\packages\\commonservicelocator\\2.0.5\\commonservicelocator.2.0.5.nupkg.sha512",
     "C:\\Users\\tokke\\.nuget\\packages\\microsoft.appcenter\\4.0.0\\microsoft.appcenter.4.0.0.nupkg.sha512",

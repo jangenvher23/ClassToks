@@ -3916,17 +3916,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
+      "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
       "projectName": "ClassToksV2",
-      "projectPath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
+      "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
       "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\ClassToksV2\\ClassToksV2\\obj\\",
+      "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\NuGet.Config",
+        "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
         "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -3942,8 +3942,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
-              "projectPath": "C:\\Users\\tokke\\Desktop\\ClassTokRepo\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj"
+            "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
+              "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj"
             }
           }
         }

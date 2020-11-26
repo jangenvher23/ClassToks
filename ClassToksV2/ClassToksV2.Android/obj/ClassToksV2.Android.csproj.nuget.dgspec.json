@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj": {}
+    "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj": {
+    "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj",
+        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj",
         "projectName": "ClassToksV2.Android",
-        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj",
+        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj",
         "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2.Android\\obj\\",
+        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\NuGet.Config",
+          "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
           "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -33,8 +33,8 @@
         "frameworks": {
           "monoandroid10.0": {
             "projectReferences": {
-              "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj": {
-                "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj"
+              "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj": {
+                "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj"
               }
             }
           }
@@ -59,20 +59,20 @@
         }
       }
     },
-    "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj": {
+    "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
+        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
         "projectName": "ClassToksV2",
-        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
+        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj",
         "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2\\obj\\",
+        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\NuGet.Config",
+          "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
           "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -88,8 +88,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
-                "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj"
+              "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
+                "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj"
               }
             }
           }
@@ -137,20 +137,20 @@
         }
       }
     },
-    "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
+    "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
         "projectName": "Tokkepedia.Shared",
-        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
+        "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\Tokkepedia.Shared.csproj",
         "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\Tokkepedia.Shared\\obj\\",
+        "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\Tokkepedia.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\NuGet.Config",
+          "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
           "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

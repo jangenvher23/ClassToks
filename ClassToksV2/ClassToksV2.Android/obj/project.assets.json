@@ -2647,18 +2647,18 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj",
+      "projectUniqueName": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj",
       "projectName": "ClassToksV2.Android",
-      "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj",
+      "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.Android\\ClassToksV2.Android.csproj",
       "packagesPath": "C:\\Users\\tokke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2.Android\\obj\\",
+      "outputPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\NuGet.Config",
+        "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\NuGet.Config",
         "C:\\Users\\tokke\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -2673,8 +2673,8 @@
       "frameworks": {
         "monoandroid10.0": {
           "projectReferences": {
-            "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj": {
-              "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks2\\Tokkepedia\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj"
+            "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj": {
+              "projectPath": "C:\\Users\\tokke\\Desktop\\ClassToks\\ClassToks\\ClassToksV2\\ClassToksV2\\ClassToksV2.csproj"
             }
           }
         }
